@@ -1,0 +1,125 @@
+/* Footer.css */
+
+/* General Styles */
+.footer {
+    background-color: #cdd7e1;
+    padding: 2rem 1rem;
+  }
+  
+  .footer-primary {
+    margin-bottom: 2rem;
+  }
+  .footer-primary-text{
+    background-color: #d3d3fa;
+    
+    padding-bottom: 0rem ;
+    padding-top: 1rem ;
+}
+.footer-primary-text .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-primary-text .nav {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-primary-text .nav-item {
+    margin-right: 1rem;
+  }
+  .footer-primary-text .col-12.col-md-7 {
+  display: flex;
+  align-items: center;
+}
+  
+  /* Social Icons */
+  .social-icon {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .social-icon:hover {
+    color: #030d19;
+  }
+  
+  /* Navigation Links */
+  .nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-item {
+    margin-bottom: 0.5rem;
+  }
+  
+  .nav-item a {
+    color: #6c757d;
+    text-decoration: none;
+  }
+  
+  .nav-item a:hover {
+    color: #343a40;
+  }
+  
+  /* Footer Sections */
+  .footer h6 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .footer h6 a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .footer h6 a:hover {
+    text-decoration: underline;
+  }
+  
+  .list-unstyled {
+    padding-left: 0;
+  }
+  
+  .list-unstyled li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .list-unstyled li a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .list-unstyled li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer Bottom */
+  .footer .small {
+    color: #6c757d;
+  }
+  
+  .footer .fw-bold {
+    font-weight: 700;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .footer-primary {
+      text-align: center;
+    }
+  
+    .footer-primary .row {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
