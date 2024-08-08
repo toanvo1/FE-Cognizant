@@ -7,8 +7,6 @@ import HomePage from "./component/Homepage";
 function App() {
   return (
     <Router>
-      {" "}
-      {/* Bao bọc toàn bộ ứng dụng với BrowserRouter */}
       <div className="app">
         <Headers />
         <Routes>
