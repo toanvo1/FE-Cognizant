@@ -1,4 +1,8 @@
 .header {
+  text-decoration: none;
+}
+.header-link-none{
+  text-decoration: none;
 }
 .header-1 {
   display: flex;
@@ -8,6 +12,7 @@
   padding: 10px 0;
   gap: 20px;
   color: black;
+  text-decoration: none;
 }
 .header-2 {
   display: flex;
@@ -29,7 +34,10 @@
   font-size: 16px;
   text-align: center;
   border-radius: 5px;
-  transition: background 0.3s ease;
+  
+}
+.icon {
+  padding-left: 10px;
 }
 .button:hover {
   background: red;

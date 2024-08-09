@@ -1,17 +1,13 @@
 import React, { useState } from "react";
 import "./MenuForm.css";
-
+import Education from "./Content/Education";
 const IndustriesForm = () => {
   // State để quản lý nội dung đang hiển thị
   const [activeSection, setActiveSection] = useState(null);
-
   // Nội dung cho các mục trong sidebar
   const sections = {
-    section1: "Content for Industry 1",
-    section2: "Content for Industry 2",
-    section3: "Content for Industry 3",
+    section1: <Education />,
   };
-
   return (
     <div className="industries-form">
       <div className="sidebar">
@@ -28,10 +24,7 @@ const IndustriesForm = () => {
       </div>
       <div className="content">
         {activeSection ? (
-          <div>
-            <h2>{`Industry ${activeSection.slice(-1)}`}</h2>
-            <p>{sections[activeSection]}</p>
-          </div>
+          sections[activeSection]
         ) : (
           <p>Please select an industry from the menu.</p>
         )}

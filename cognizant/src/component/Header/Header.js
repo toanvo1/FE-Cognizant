@@ -21,10 +21,18 @@ const Header = () => {
     <div className="container">
       <div className="header">
         <div className="header-1">
-          <Link to="/">Careers</Link>
-          <Link to="/">News</Link>
-          <Link to="/">Events</Link>
-          <Link to="/">Investors</Link>
+          <Link to="/" className="header-link-none">
+            Careers
+          </Link>
+          <Link to="/" className="header-link-none">
+            News
+          </Link>
+          <Link to="/" className="header-link-none">
+            Events
+          </Link>
+          <Link to="/" className="header-link-none">
+            Investors
+          </Link>
         </div>
         <div className="header-2">
           <div className="image">
@@ -32,7 +40,9 @@ const Header = () => {
           </div>
           <div>
             <div
-              className={`button ${selectedForm === "industries" ? "selected" : ""}`}
+              className={`button ${
+                selectedForm === "industries" ? "selected" : ""
+              }`}
               onClick={() => handleClick("industries")}
             >
               Industries
@@ -44,7 +54,9 @@ const Header = () => {
           </div>
           <div>
             <div
-              className={`button ${selectedForm === "service" ? "selected" : ""}`}
+              className={`button ${
+                selectedForm === "service" ? "selected" : ""
+              }`}
               onClick={() => handleClick("service")}
             >
               Service
@@ -56,7 +68,9 @@ const Header = () => {
           </div>
           <div>
             <div
-              className={`button ${selectedForm === "insights" ? "selected" : ""}`}
+              className={`button ${
+                selectedForm === "insights" ? "selected" : ""
+              }`}
               onClick={() => handleClick("insights")}
             >
               Insights

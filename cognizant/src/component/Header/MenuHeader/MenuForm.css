@@ -1,46 +1,39 @@
-/* Sidebar.css */
-.sidebar {
-  width: 250px;
-  background: #f4f4f4;
-  padding: 15px;
-  height: 100%;
+/* MenuForm.css */
+
+.industries-form {
+  display: flex;
+  flex-direction: row;
 }
 
-.sidebar h3 {
-  margin-top: 0;
+.sidebar {
+  width: 250px; /* Điều chỉnh kích thước theo nhu cầu */
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+.content {
+  flex: 1;
+  padding: 10px;
+  background-color: #fff;
 }
 
 .sidebar ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
 }
 
-.sidebar ul li {
-  margin: 10px 0;
+.sidebar li {
+  margin-bottom: 10px;
 }
 
 .sidebar button {
   background: none;
   border: none;
-  color: #007bff;
+  color: blue;
   cursor: pointer;
-  text-align: left;
-  font-size: 16px;
-  padding: 10px;
-  width: 100%;
+  text-decoration: underline;
 }
 
 .sidebar button:hover {
-  text-decoration: underline;
-  color:rgb(25, 0, 255) ;
-}
-
-.button {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.icon {
-  padding-left: 8px;
+  color: darkblue;
 }
