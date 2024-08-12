@@ -13,7 +13,7 @@ function Footer() {
     <div className="container">
       <div className="footer">
         <div className="header-footer">
-          <div className="header-footer-inner">
+          <div className="header-footer-inner"> 
             <div className="container">
               <div className="container-inner">
                 <div className="innner-left">
@@ -40,11 +40,11 @@ function Footer() {
                 </div>
                 <div className="innner-right">
                   <ul>
-                    <li>Sitemap</li>
-                    <li>Terms</li>
-                    <li>Privacy Notice</li>
-                    <li>Notice Cookie</li>
-                    <li>©2024 Cognizant, all rights reserved</li>
+                  <li><Link className="none" to="">Sitemap{" "}</Link></li>
+                  <li><Link className="none" to="">Terms{" "}</Link></li>
+                  <li><Link className="none" to="">Privacy Notice{" "}</Link></li>
+                  <li><Link className="none" to="">Cookie Notice{" "}</Link></li>
+                  <li>©2024 Cognizant, all rights reserved</li>
                   </ul>
                 </div>
               </div>
