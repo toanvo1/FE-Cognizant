@@ -1,12 +1,13 @@
 import React from "react";
 import "./Style/Menu.css";
 import { Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const FooterMenu = () => {
   return (
     <div className="container">
       {/* Cột chính */}
-      <div style={{display: "flex", flexDirection:"row",justifyContent:"space-around"}}>
+      <div className="row">
         <div className="col col-md-8">
           <div className="row">
             <h3>Industries</h3>
