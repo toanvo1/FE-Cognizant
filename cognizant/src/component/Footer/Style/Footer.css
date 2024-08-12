@@ -18,10 +18,9 @@
   margin-right: 10px;
 }
 
-.innner-left .icon {
-  min-width: 50px;
+.icon:hover {
+  color: #323e81;
 }
-
 .innner-right ul {
   display: flex;
 }
@@ -30,7 +29,9 @@
   margin-bottom: 5px;
   padding-right: 10px;
 }
-
+.none:hover {
+  color: #6b87e3;
+}
 .body-footer {
   margin-top: 20px;
 }
