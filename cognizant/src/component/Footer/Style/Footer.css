@@ -1,0 +1,55 @@
+.header-footer-inner {
+  display: flex;
+  padding: 20px 0;
+  background: #e8e8e6;
+}
+
+.container-inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 75pc;
+}
+
+.innner-left {
+  display: flex;
+}
+
+.innner-left a {
+  margin-right: 10px;
+}
+
+.innner-left .icon {
+  min-width: 50px;
+}
+
+.innner-right ul {
+  display: flex;
+}
+
+.innner-right li {
+  margin-bottom: 5px;
+  padding-right: 10px;
+}
+
+.body-footer {
+  margin-top: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+
+.content-footer {
+  margin-bottom: 30px;
+}
+
+ul,
+.li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}

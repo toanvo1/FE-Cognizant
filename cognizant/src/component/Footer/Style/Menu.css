@@ -1,0 +1,38 @@
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin: 0px 130px;
+  }
+  
+  .section {
+    width: 250px;
+    margin-bottom: 20px;
+  }
+  
+  .section h3 {
+    margin-bottom: 10px;
+  }
+  
+  .section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .section li {
+    margin-bottom: 5px;
+  }
+  .none {
+    text-decoration: none;
+}
+.section2 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.content-inner {
+  display: flex;
+  justify-content: space-between;
+}
