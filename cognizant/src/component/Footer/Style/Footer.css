@@ -4,7 +4,7 @@
   margin: 0 auto;
   padding: 0 50px;
   box-sizing: border-box; 
-  background-color: #044026;
+  background-color: white;
 }
 
 /* Tiêu đề và phụ đề */
@@ -67,7 +67,7 @@
 .form-group textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #044026;
   border-radius: 4px;
   font-size: 16px;
 }
