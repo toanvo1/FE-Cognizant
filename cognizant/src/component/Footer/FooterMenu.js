@@ -1,316 +1,67 @@
 import React from "react";
 import "./Style/Menu.css";
+import { PhoneOutlined, MailOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import logo from '../../image/logo.png';
 
 const FooterMenu = () => {
   return (
-    <div className="container">
-      {/* Cột chính */}
-      <div className="row">
-        <div className="col col-md-8">
-          <div className="row">
-            <h3>Industries</h3>
-            <div className="content-inner">
-              {/* Phần 1 */}
-              <div className="section">
-                <div>
-                  <ul>
-                    <li>
-                      <Link className="none" to="">
-                        Automotive{" "}
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="none" to="">
-                        Banking
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="none" to="">
-                        Blue Economy
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="none" to="">
-                        Capital Markets
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="none" to="">
-                        Communications, Media & Technology
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="none" to="">
-                        Consumer Goods
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              {/* Phần 2 */}
-              <div className="section">
-                <div>
-                  <ul>
-                    <li>
-                      <Link className="none" to="">
-                        Automotive{" "}
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="none" to="">
-                        Capital Markets
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="none" to="">
-                        Communications, Media & Technology
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="none" to="">
-                        Consumer Goods
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              {/* Phần 3 */}
-              <div className="section">
-                <div>
-                  <ul>
-                    <li>
-                      <Link className="none" to="">
-                        Automotive{" "}
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="none" to="">
-                        Capital Markets
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="none" to="">
-                        Communications, Media & Technology
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="none" to="">
-                        Consumer Goods
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+      <div className="container">
+        <footer className="footer-container">
+      <div className="footer-left">
+        <div className="footer-logo-section">
+          <img src={logo}  className="footer-logo" />
+        </div>
+        <div className="footer-links-section">
+          <div className="footer-column">
+            <h4>Industries</h4>
+            <Link className="footer-link" to="#">FAQ</Link>
+            <Link className="footer-link" to="#">Chính sách bảo mật</Link>
+            <Link className="footer-link" to="#">Hướng dẫn thanh toán</Link>
+            <Link className="footer-link" to="#">Kích hoạt khoá học</Link>
+            <Link className="footer-link" to="#">Điều khoản sử dụng</Link>
           </div>
-
-          {/* Phần dịch vụ */}
-          <div className="row">
-            <h3>Services</h3>
+          <div className="footer-column">
+            <h4>Services</h4>
+            <Link className="footer-link" to="#">FAQ</Link>
+            <Link className="footer-link" to="#">Chính sách bảo mật</Link>
+            <Link className="footer-link" to="#">Hướng dẫn thanh toán</Link>
+            <Link className="footer-link" to="#">Kích hoạt khoá học</Link>
+            <Link className="footer-link" to="#">Điều khoản sử dụng</Link>
           </div>
-          <div className="content-inner">
-            <div className="section">
-              <div>
-                <ul>
-                  <li>
-                    <Link className="none" to="">
-                      Automotive{" "}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="none" to="">
-                      Capital Markets
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="none" to="">
-                      Communications, Media & Technology
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="none" to="">
-                      Consumer Goods
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="section">
-              <div>
-                <ul>
-                  <li>
-                    <Link className="none" to="">
-                      Automotive{" "}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="none" to="">
-                      Capital Markets
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="none" to="">
-                      Communications, Media & Technology
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="none" to="">
-                      Consumer Goods
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="section">
-              <div>
-                <ul>
-                  <li>
-                    <Link className="none" to="">
-                      Automotive{" "}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="none" to="">
-                      Capital Markets
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="none" to="">
-                      Communications, Media & Technology
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="none" to="">
-                      Consumer Goods
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <h3>Consulting</h3>
-          </div>
-          <div className="row">
-            <h3>Insights</h3>
-          </div>
-          <div className="content-inner">
-            <div className="section">
-              <div>
-                <ul>
-                  <li>
-                    <Link className="none" to="">
-                      Automotive{" "}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="none" to="">
-                      Capital Markets
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="none" to="">
-                      Communications, Media & Technology
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="none" to="">
-                      Consumer Goods
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="section">
-              <div>
-                <ul>
-                  <li>
-                    <Link className="none" to="">
-                      Automotive{" "}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="none" to="">
-                      Capital Markets
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="none" to="">
-                      Communications, Media & Technology
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="none" to="">
-                      Consumer Goods
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="section">
-              <div>
-                <ul>
-                  <li>
-                    <Link className="none" to="">
-                      Automotive{" "}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="none" to="">
-                      Capital Markets
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="none" to="">
-                      Communications, Media & Technology
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="none" to="">
-                      Consumer Goods
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div className="footer-column">
+            <h4>About us</h4>
+            <Link className="footer-link" to="#">FAQ</Link>
+            <Link className="footer-link" to="#">Chính sách bảo mật</Link>
+            <Link className="footer-link" to="#">Hướng dẫn thanh toán</Link>
+            <Link className="footer-link" to="#">Kích hoạt khoá học</Link>
+            <Link className="footer-link" to="#">Điều khoản sử dụng</Link>
           </div>
         </div>
+      </div>
+      <div className="footer-right">
+        <div className="footer-signup-section">
+          <h4>Sign up for new member</h4>
+          <div className="email-input-container">
+            <MailOutlined />
 
-        {/* Cột phụ */}
-        <div className="col col-md-4">
-          <div className="row">
-            <h3>About Cozginer</h3>
           </div>
-          <div className="section">
-            <div>
-              <ul>
-                <li>
-                  <Link className="none" to="">
-                    Automotive{" "}
-                  </Link>
-                </li>
-                <li>
-                  <Link className="none" to="">
-                    Capital Markets
-                  </Link>
-                </li>
-                <li>
-                  <Link className="none" to="">
-                    Communications, Media & Technology
-                  </Link>
-                </li>
-                <li>
-                  <Link className="none" to="">
-                    Consumer Goods
-                  </Link>
-                </li>
-              </ul>
+          <div className="contact-info">
+            <div className="contact-item">
+              <PhoneOutlined />
+              <span>(+84) 907 303 646</span>
+            </div>
+            <div className="contact-item">
+              <MailOutlined />
+              <span>Info@power5.vn</span>
+            </div>
+            <div className="contact-item">
+              <span>No.7, 9th Street, Binh An ward, Dist 2, Ho Chi Minh City</span>
             </div>
           </div>
         </div>
       </div>
+    </footer>
     </div>
   );
 };

@@ -1,38 +1,114 @@
-
-  .row{
-    color: #000048;
-  }
-  .section {
-    width: 250px;
-  }
-  
-  .section h3 {
-    margin-bottom: 10px;
-  }
-  
-  .section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .section li {
-    margin-bottom: 5px;
-    
-  }
-  .none {
-    text-decoration: none;
-    font-weight: 400px;
-    color: #000048;
-}
-.none:hover {
-  color: #4848df; /* Màu khi hover */
-}
-.section2 {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-.content-inner {
+.footer-container {
+  background-color: #123524;
+  color: #ffffff;
   display: flex;
+  justify-content: space-between;
+  padding: 40px 60px; /* Adjusted padding for balance */
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  width: 45%; /* Adjusted width to give space for right section */
+}
+
+.footer-logo-section {
+  margin-bottom: 20px; /* Adds some space between the logo and links */
+}
+
+.footer-logo {
+  width: 350px; /* Adjusted to match the image ratio */
+}
+
+.footer-links-section {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;   
+  line-height: 2.3;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  color: #EA5A47;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 10px;
   
+}
+
+.footer-column h4::after {
+  content: "";
+  width: 150%;
+  height: 2.5px;
+  background-color: #EA5A47;
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Center underline within the text */
+  transform: translateX(-50%);
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45%; /* Matches the width ratio on the right */
+}
+
+.footer-signup-section {
+  margin-bottom: 20px;
+}
+
+.email-input-container {
+  display: flex;
+  align-items: center;
+}
+
+.email-input {
+  width: 65%; /* Slightly reduced width for the input */
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.signup-button {
+  background-color: #ffffff;
+  color: #123524;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-item span {
+  margin-left: 10px;
 }
