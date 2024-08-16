@@ -5,7 +5,7 @@ import './Style/Footer.css'
 function Footer({ formData = {}, handleChange }) {
   return (
     <div>
-      <div className="container">
+      <div >
         <div className="container-inner">
           <h2 className="title">Please Leave Your Information Below</h2>
           <p className="subtitle">To Match Your Business Goals</p>
