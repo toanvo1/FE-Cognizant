@@ -6,7 +6,7 @@ import logo from '../../image/logo.png';
 
 const FooterMenu = () => {
   return (
-      <div >
+      <div>
          <footer className="footer-container">
             <div className="footer-left">
               <img src={logo} className="footer-logo" alt="Logo" />
@@ -40,8 +40,13 @@ const FooterMenu = () => {
               </div>
 
               <div className="footer-right">
+                <h4>Sign up for new member</h4>
+                <form className="signup-form">
+                  <input type="email" placeholder="Email Address" className="email-input"/>
+                  <button type="submit" className="signup-button">Sign up</button>
+                </form>
                 <div className="contact-item">
-                  <EnvironmentOutlined />
+                  <EnvironmentOutlined/>
                   <span>No.7, 9th Street, Binh An ward, Dist 2, Ho Chi Minh City</span>
                 </div>
                 <div className="contact-item">
