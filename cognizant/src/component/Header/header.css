@@ -1,8 +1,9 @@
 .header {
   text-decoration: none;
 }
-.header-link-none{
+.header-link-none {
   text-decoration: none;
+  color: #ea5a47;
 }
 .header-1 {
   display: flex;
@@ -11,20 +12,22 @@
   justify-content: flex-end;
   padding: 10px 0;
   gap: 20px;
-  color: black;
+  color: #ea5a47;
   text-decoration: none;
 }
 .header-2 {
   display: flex;
   flex-direction: row;
+  align-items: center;
   padding: 10px 0;
   gap: 20px;
 }
 .image {
 }
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 198px;
+  height: 98px;
+  object-fit: contain;
 }
 .button {
   display: inline-block;
@@ -34,15 +37,121 @@
   font-size: 16px;
   text-align: center;
   border-radius: 5px;
-  
 }
 .icon {
   padding-left: 10px;
 }
 .button:hover {
-  background: red;
+  background: #006543;
+  color: #fff;
 }
 .button.selected {
-  background-color: red; /* Màu nền khi hover hoặc khi nút được chọn */
+  background-color: #006543; /* Màu nền khi hover hoặc khi nút được chọn */
   color: #fff; /* Màu chữ */
-} 
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #006543;
+  border-radius: 6px;
+  padding: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 400px; /* Chiều rộng tối đa trên màn hình lớn */
+ /* Căn giữa container */
+}
+
+.search-icon {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #006543;
+}
+
+.search-input-123 {
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 16px;
+  box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước tổng thể */
+}
+
+.search-container input::placeholder {
+  color: #ff5733; /* Màu placeholder */
+  font-size: 16px;
+}
+@media only screen and (min-width: 769px) {
+  .menu-icon {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header-1,
+  .header-2 {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .header-2 {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .image {
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .logo {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .button {
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+  }
+
+  .search-container {
+    max-width: 100%; /* Chiều rộng tối đa 100% trên màn hình nhỏ */
+    padding: 5px 8px; /* Điều chỉnh padding cho màn hình nhỏ */
+  }
+
+  .search-icon {
+    font-size: 16px; /* Giảm kích thước icon */
+    margin-right: 8px; /* Giảm khoảng cách giữa icon và input */
+  }
+
+  .search-input-123 {
+    font-size: 14px; /* Giảm kích thước font */
+    padding: 6px; /* Điều chỉnh padding cho màn hình nhỏ */
+  }
+  .form-container {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .menu-expanded .header-2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-expanded .button {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .menu-expanded .search-container {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,117 @@
+.landing-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #054312; /* Màu nền xanh đậm */
+  padding: 0 50px;
+  position: relative;
+  overflow: hidden; /* Để ẩn các phần tử ngoài container nếu cần */
+}
+
+.left-section,
+.right-section {
+  flex: 1;
+  transition: opacity 1s ease; /* Hiệu ứng mượt mà cho sự thay đổi */
+}
+
+.left-section {
+  color: white;
+  max-width: 50%;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(20px); /* Di chuyển nội dung ra ngoài */
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.left-section.show {
+  opacity: 1;
+  transform: translateY(0); /* Di chuyển về vị trí gốc */
+}
+
+.left-section h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  max-width: 65%;
+}
+
+.left-section p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #84cc2e, #aed43e);
+  border: none;
+  border-radius: 50px;
+  padding: 15px 30px;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button i {
+  margin-left: 10px;
+}
+
+.right-section {
+  max-width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden; /* Để ẩn phần hình ảnh không cần thiết */
+}
+
+.right-section img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng */
+  border-top-left-radius: 50px;
+  opacity: 0;
+  transition: opacity 1s ease; /* Hiệu ứng mờ dần và rõ dần */
+}
+
+.right-section img.show {
+  opacity: 1; /* Hiện hình ảnh khi có lớp 'show' */
+}
+
+.bottom-navigation ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.bottom-navigation li {
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  position: relative;
+}
+
+.bottom-navigation li::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+.bottom-navigation li:hover::after {
+  width: 100%;
+}
+
+.bottom-navigation li:hover {
+  color: #aed43e; /* Màu xanh lá cây sáng hơn khi hover */
+}
+.description-banner {
+  font-size: 25px;
+  max-width: 1150px;
+  
+  padding: 50px;
+}
