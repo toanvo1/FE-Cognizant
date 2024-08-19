@@ -1,0 +1,80 @@
+.banner-midle-bottom-background {
+  background-color: aliceblue;
+  border: 1px solid #141313;
+  width: 100%;
+  height: auto; /* Để chiều cao tự động phù hợp với nội dung */
+  padding: 20px; /* Thêm khoảng cách để làm cho nội dung không bị cắt */
+}
+
+.banner-midle-bottom {
+  color: black;
+  margin-bottom: 20px;
+}
+
+.content-banner-midle-bottom {
+  display: flex;
+  flex-wrap: wrap; /* Cho phép các phần tử con xuống dòng nếu cần */
+  gap: 10px; /* Thêm khoảng cách giữa các phần tử */
+}
+
+.banner-midle-bottom-postion {
+  flex: 1 1 100%; /* Đặt kích thước cơ bản và cho phép chúng co dãn */
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  display: block; /* Đảm bảo hình ảnh có thể chiếm toàn bộ chiều rộng */
+  width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng của vùng chứa */
+  max-width: 100%; /* Đặt kích thước tối đa để phù hợp với các màn hình nhỏ hơn */
+}
+
+.image-container img {
+  width: 100%; /* Đảm bảo ảnh bao phủ toàn bộ chiều rộng của vùng chứa */
+  height: auto; /* Duy trì tỷ lệ khung hình của ảnh */
+  display: block;
+}
+
+.image-container .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  height: 50%; /* Hiển thị một phần nội dung trước khi di chuột hoặc chạm */
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.image-container .overlay .additional-text {
+  display: none; /* Ẩn văn bản thêm khi không di chuột hoặc chạm */
+}
+
+.image-container:hover .overlay,
+.image-container.active .overlay {
+  height: 100%; /* Hiển thị toàn bộ nội dung khi di chuột vào ảnh hoặc khi ảnh được chọn */
+}
+
+.image-container:hover .overlay .additional-text,
+.image-container.active .overlay .additional-text {
+  display: block; /* Hiển thị văn bản thêm khi di chuột vào ảnh hoặc khi ảnh được chọn */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .image-container .overlay {
+    height: 70%; /* Điều chỉnh chiều cao cho màn hình nhỏ hơn */
+  }
+
+  .image-container.active .overlay {
+    height: 100%; /* Đảm bảo toàn bộ nội dung hiển thị khi ảnh được chọn */
+  }
+
+  .image-container:hover .overlay,
+  .image-container.active .overlay {
+    height: 100%; /* Tăng chiều cao khi di chuột vào ảnh hoặc khi ảnh được chọn */
+  }
+}

@@ -6,7 +6,7 @@ import logo from '../../image/logo.png';
 
 const FooterMenu = () => {
   return (
-      <div >
+      <div className='container'>
          <footer className="footer-container">
             <div className="footer-left">
               <img src={logo} className="footer-logo" alt="Logo" />

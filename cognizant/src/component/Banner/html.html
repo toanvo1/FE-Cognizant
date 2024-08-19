@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        .image-container {
+            position: relative;
+            display: inline-block;
+            width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng của vùng chứa */
+            max-width: 600px; /* Đặt kích thước tối đa để phù hợp với các màn hình lớn hơn */
+        }
+
+        .image-container img {
+            width: 100%; /* Đảm bảo ảnh bao phủ toàn bộ chiều rộng của vùng chứa */
+            height: auto; /* Duy trì tỷ lệ khung hình của ảnh */
+            display: block;
+        }
+
+        .image-container .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            height: 50%; /* Hiển thị một phần nội dung trước khi di chuột */
+            overflow: hidden;
+            transition: height 0.3s ease;
+        }
+
+        .image-container .overlay .additional-text {
+            display: none; /* Ẩn văn bản thêm khi không di chuột */
+        }
+
+        .image-container:hover .overlay {
+            height: 95%; /* Hiển thị toàn bộ nội dung khi di chuột vào ảnh */
+        }
+
+        .image-container:hover .overlay .additional-text {
+            display: block; /* Hiển thị văn bản thêm khi di chuột vào ảnh */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .image-container {
+                max-width: 100%;
+            }
+
+            .image-container .overlay {
+                height: 70%; /* Có thể cần điều chỉnh để phù hợp với các màn hình nhỏ */
+            }
+
+            .image-container:hover .overlay {
+                height: 90%; /* Tăng chiều cao khi di chuột vào ảnh */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="./image/background-dep-don-gian.jpg" alt="Description" />
+        <div class="overlay">
+            Nội dung chữ hiện ra một phần trước
+            <div class="additional-text">và toàn bộ khi di chuột vào ảnh</div>
+        </div>
+    </div>
+</body>
+</html>
