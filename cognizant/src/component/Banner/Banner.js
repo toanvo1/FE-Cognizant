@@ -5,6 +5,7 @@ import logo from "../../image/logo.png";
 import logo2 from "../../image/background-dep-don-gian.jpg";
 import logo3 from "../../image/logo.png";
 import BannerMidle from "./BannerMidle";
+import Footer from "../Footer/Footer";
 const contentArray = [
   {
     text: "In power5 the greatest solution for you",
@@ -78,6 +79,9 @@ const Banner = () => {
         </div>
       </div>
       <BannerMidle />
+
+      hhhhaaaaaaaaaaaaaaaaaaaa
+      {/* <Footer /> */}
     </div>
   );
 };
