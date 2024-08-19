@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../container.css";
 import { Link } from "react-router-dom";
-import logo from "../../image/background-dep-don-gian.jpg";
+import logo from "../../image/logo.png";
 import "../Header/header.css";
 import IndustriesForm from "../Header/MenuHeader/IndustriesForm";
 import ServiceForm from "../Header/MenuHeader/ServiceForm";
@@ -9,7 +9,8 @@ import InsightsForm from "../Header/MenuHeader/InsightsForm";
 import AboutForm from "../Header/MenuHeader/AboutForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
-
+import Contanct from "./MenuHeader/Contanct";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 const Header = () => {
   const [selectedForm, setSelectedForm] = useState(null);
 
@@ -45,7 +46,7 @@ const Header = () => {
               }`}
               onClick={() => handleClick("industries")}
             >
-              Industries
+              INDUSTRIES
               <FontAwesomeIcon
                 icon={selectedForm === "industries" ? faCaretUp : faCaretDown}
                 className="icon"
@@ -59,7 +60,7 @@ const Header = () => {
               }`}
               onClick={() => handleClick("service")}
             >
-              Service
+              ABOUT US
               <FontAwesomeIcon
                 icon={selectedForm === "service" ? faCaretUp : faCaretDown}
                 className="icon"
@@ -73,7 +74,7 @@ const Header = () => {
               }`}
               onClick={() => handleClick("insights")}
             >
-              Insights
+              SERVICES
               <FontAwesomeIcon
                 icon={selectedForm === "insights" ? faCaretUp : faCaretDown}
                 className="icon"
@@ -85,12 +86,30 @@ const Header = () => {
               className={`button ${selectedForm === "about" ? "selected" : ""}`}
               onClick={() => handleClick("about")}
             >
-              About
+              RESOURCE
               <FontAwesomeIcon
                 icon={selectedForm === "about" ? faCaretUp : faCaretDown}
                 className="icon"
               />
             </div>
+          </div>
+          <div>
+            <div
+              className={`button ${
+                selectedForm === "contact" ? "selected" : ""
+              }`}
+              onClick={() => handleClick("contact")}
+            >
+              CONTACT
+              <FontAwesomeIcon
+                icon={selectedForm === "contact" ? faCaretUp : faCaretDown}
+                className="icon"
+              />
+            </div>
+          </div>
+          <div className="search-container">
+            <FontAwesomeIcon icon={faSearch} className="search-icon" />
+            <input type="text" placeholder="Search" />
           </div>
         </div>
         <div className="form-container">
@@ -98,6 +117,7 @@ const Header = () => {
           {selectedForm === "service" && <ServiceForm />}
           {selectedForm === "insights" && <InsightsForm />}
           {selectedForm === "about" && <AboutForm />}
+          {selectedForm === "contact" && <Contanct />}
         </div>
       </div>
     </div>
