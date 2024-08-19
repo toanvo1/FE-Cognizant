@@ -18,7 +18,7 @@ const BannerMidleBottom = () => {
             <div className="image-container">
               <img src={mot} alt="Description" />
               <div className="overlay">
-                Baking
+                Baking1
                 <div className="additional-text">
                   <p>In power5 we trust to be the</p>
                   <p>
@@ -32,7 +32,7 @@ const BannerMidleBottom = () => {
             <div className="image-container">
               <img src={mot} alt="Description" />
               <div className="overlay">
-                Baking
+                Baking2
                 <div className="additional-text">
                   <p>In power5 we trust to be the</p>
                   <p>
@@ -48,7 +48,7 @@ const BannerMidleBottom = () => {
             <div className="image-container">
               <img src={mot} alt="Description" />
               <div className="overlay">
-                Baking
+                Baking3
                 <div className="additional-text">
                   <p>In power5 we trust to be the</p>
                   <p>
@@ -62,7 +62,7 @@ const BannerMidleBottom = () => {
             <div className="image-container">
               <img src={mot} alt="Description" />
               <div className="overlay">
-                Baking
+                Baking4
                 <div className="additional-text">
                   <p>In power5 we trust to be the</p>
                   <p>
