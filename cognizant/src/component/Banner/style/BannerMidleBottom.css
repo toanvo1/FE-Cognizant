@@ -68,4 +68,8 @@
   .image-container:hover .overlay {
     height: 92%; /* Tăng chiều cao khi di chuột vào ảnh */
   }
+  .banner-midle-bottom-postion{
+    flex-direction: column;
+  }
+  
 }
