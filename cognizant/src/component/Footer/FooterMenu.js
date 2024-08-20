@@ -19,7 +19,8 @@ const FooterMenu = () => {
               <div className="contact-item">
                 <EnvironmentOutlined />
                 <span>
-                  3rd Floor, Vietcom Building 7-9 Dang Thai Mai St, Ward 7, Phu Nhuan Dist, HCMC
+                  <p>3rd Floor, Vietcom Building</p>
+                  <p>7-9 Dang Thai Mai St, Ward 7, Phu Nhuan Dist, HCMC</p>
                 </span>
               </div>
               <div className="contact-item">
@@ -32,7 +33,7 @@ const FooterMenu = () => {
               </div>
             </div>
             <div className="footer-right-bottom">
-              <span>Power5 © Copyright 2020, Inc. All rights reserved</span>
+              <span>Power5 © Copyright 2020, Inc. All rights reserved.</span>
             </div>
           </div>
           <div className="footer-right">
