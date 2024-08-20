@@ -27,7 +27,7 @@
 .contact-item {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .contact-item svg {
@@ -37,14 +37,14 @@
 }
 
 .contact-item span {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 2.5;
   color: #FFFFFF;
 }
 
 .footer-right-bottom {
   margin-top: auto;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .footer-right {
@@ -67,6 +67,11 @@
   text-transform: uppercase;
   position: relative;
   padding-bottom: 10px;
+  font-family: Roboto;
+}
+.contact-item p {
+  margin: 0;
+  line-height: 1.2; /* Điều chỉnh line-height để giảm khoảng cách giữa các dòng */
 }
 
 .footer-column h4::after {
@@ -90,5 +95,7 @@
 }
 
 .footer-link:hover {
-  text-decoration: underline;
+  display: block;
+  color: #EA5A47;
+  text-decoration: none;
 }

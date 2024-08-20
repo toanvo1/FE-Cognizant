@@ -1,43 +1,46 @@
 .footer-top-container {
     background-color: #044026;
     width: 100%;
-    padding: 40px 0;
+    padding: 50px 0;
   }
   
   .footer-top-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
+    max-width: 100%;
     margin: 0 auto;
   }
   
   .footer-top-left {
     color: white;
-    flex: 2; /* Tăng giá trị flex để phần bên trái rộng hơn */
-    max-width: 60%; /* Tăng max-width để phần bên trái chiếm nhiều diện tích hơn */
+    flex: 3; /* Tăng giá trị flex để phần bên trái rộng hơn */
+    max-width: 70%; /* Tăng max-width để phần bên trái chiếm nhiều diện tích hơn */
+    margin-left: 70px;
   }
-  
   .footer-top-left h2 {
-    font-size: 26px;
+    font-size: 28px;
     margin-bottom: 10px;
   }
   
   .footer-top-left p {
-    font-size: 18px;
+    font-size: 28px;
   }
   
   .footer-top-right {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     flex: 1;
+    max-width: 50%; /* Đặt giới hạn chiều rộng chính xác cho phần bên phải */
+    padding-right: 50px;
   }
-  
+
   .footer-logo {
-    max-height: 60px;
-    margin-left: 20px; /* Adds spacing between logos */
-  }
+    height: auto; /* Đảm bảo tỷ lệ của logo không bị thay đổi */
+    max-height: 100%; /* Điều chỉnh chiều cao tối đa của logo */
+    margin-left: 20px; /* Khoảng cách giữa các logo */
+}
   
   .footer-logo:first-child {
     margin-left: 0; /* Remove margin from the first logo */
