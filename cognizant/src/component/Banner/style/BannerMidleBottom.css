@@ -62,7 +62,7 @@
   }
 
   .image-container .overlay {
-    height: 50%; /* Có thể cần điều chỉnh để phù hợp với các màn hình nhỏ */
+    height: 40%; /* Có thể cần điều chỉnh để phù hợp với các màn hình nhỏ */
   }
 
   .image-container:hover .overlay {
