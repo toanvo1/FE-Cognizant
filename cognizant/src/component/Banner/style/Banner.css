@@ -109,9 +109,56 @@
 .bottom-navigation li:hover {
   color: #aed43e; /* Màu xanh lá cây sáng hơn khi hover */
 }
+
 .description-banner {
   font-size: 25px;
   max-width: 1150px;
-  
   padding: 50px;
+  color: black; /* Đảm bảo chữ có màu tương phản tốt */
+  background-color: #FFFFFF; /* Màu nền phù hợp */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .landing-container {
+    flex-direction: column; /* Đổi hướng flex cho màn hình nhỏ */
+    padding: 20px;
+  }
+
+  .left-section,
+  .right-section {
+    max-width: 100%;
+    flex: none;
+  }
+
+  .left-section h2 {
+    font-size: 2em; /* Giảm kích thước tiêu đề */
+  }
+
+  .left-section p {
+    font-size: 1em; /* Giảm kích thước chữ */
+  }
+
+  .cta-button {
+    font-size: 1.2em; /* Giảm kích thước nút */
+    padding: 10px 20px; /* Giảm padding cho nút */
+  }
+
+  .right-section img {
+    max-height: 50vh; /* Giới hạn chiều cao hình ảnh */
+    border-radius: 0; /* Bỏ bo góc hình ảnh */
+  }
+
+  .bottom-navigation ul {
+    flex-direction: row; /* Đổi hướng danh sách điều hướng */
+  }
+
+  .bottom-navigation li {
+    font-size: 1em; /* Giảm kích thước chữ */
+  }
+
+  .description-banner {
+    font-size: 20px; /* Giảm kích thước chữ cho màn hình nhỏ */
+    padding: 20px; /* Giảm padding */
+  }
 }

@@ -13,7 +13,6 @@ function Footer({ formData = {}, handleChange }) {
             <div className="col-5">
               <div className="footer-section">
                 <div className="form-group">
-                  <label htmlFor="name">Họ và tên</label>
                   <input
                     type="text"
                     id="name"
@@ -25,7 +24,6 @@ function Footer({ formData = {}, handleChange }) {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="companyName">Tên công ty</label>
                   <input
                     type="text"
                     id="companyName"
@@ -37,7 +35,6 @@ function Footer({ formData = {}, handleChange }) {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="phoneNumber">Phone number</label>
                   <input
                     type="tel"
                     id="phoneNumber"
@@ -53,7 +50,6 @@ function Footer({ formData = {}, handleChange }) {
             <div className="col-5">
               <div className="footer-section">
                 <div className="form-group">
-                  <label htmlFor="email">Email</label>
                   <input
                     type="email"
                     id="email"
@@ -65,7 +61,6 @@ function Footer({ formData = {}, handleChange }) {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="position">Chức danh</label>
                   <input
                     type="text"
                     id="position"
@@ -77,7 +72,6 @@ function Footer({ formData = {}, handleChange }) {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="companySize">Quy mô nhân sự</label>
                   <select
                     id="companySize"
                     name="companySize"
