@@ -6,6 +6,7 @@ import logo2 from "../../image/background-dep-don-gian.jpg";
 import logo3 from "../../image/logo.png";
 import BannerMidle from "./BannerMidle";
 import Footer from "../Footer/Footer";
+
 const contentArray = [
   {
     text: "In power5 the greatest solution for you",
@@ -38,7 +39,7 @@ const Banner = () => {
         setIndex((prevIndex) => (prevIndex + 1) % contentArray.length);
         setIsVisible(true); // Hiện nội dung mới
       }, 1000); // Thời gian ẩn và hiện (phải khớp với transition trong CSS)
-    }, 8000); // Chuyển đổi nội dung sau mỗi 3 giây
+    }, 8000); // Chuyển đổi nội dung sau mỗi 8 giây
 
     return () => clearInterval(interval); // Dọn dẹp interval khi component unmount
   }, []);
@@ -73,14 +74,11 @@ const Banner = () => {
           </div>
         </div>
         <div className="description-banner">
-          Cognizant helps companies modernize technology,
-          reimagine processes and transform experiences so they stay ahead in a
-          fast-changing world.
+          Cognizant helps companies modernize technology, reimagine processes
+          and transform experiences so they stay ahead in a fast-changing world.
         </div>
       </div>
       <BannerMidle />
-
-      hhhhaaaaaaaaaaaaaaaaaaaa
       {/* <Footer /> */}
     </div>
   );

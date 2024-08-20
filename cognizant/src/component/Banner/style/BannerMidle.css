@@ -1,31 +1,36 @@
+/* CSS hiện tại của bạn */
+
+/* Banner container */
 .banner-midle {
-  background-image: url("../../../image/background.png"); /* Thay đổi đường dẫn tới ảnh của bạn */
-  background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ vùng chứa */
-  background-position: center; /* Căn chỉnh hình ảnh ở giữa */
-  background-repeat: no-repeat; /* Không lặp lại hình ảnh */
-  width: 100%; /* Đảm bảo phần tử chiếm toàn bộ chiều rộng */
-  height: 2000px; /* Chiều cao 100% của viewport, bạn có thể điều chỉnh theo nhu cầu */
+  background-image: url("../../../image/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 2000px;
   display: flex;
-  flex-direction: column; /* Đặt phần tử con theo chiều dọc */
-  align-items: center; /* Căn giữa nội dung theo chiều ngang */
-  color: white; /* Màu chữ để đảm bảo dễ đọc trên nền tối */
-  object-fit: con;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  object-fit: cover;
 }
 
 .banner-midle h1 {
-  margin-top: 0; /* Xóa khoảng cách trên cùng để nội dung nằm ở đầu */
-  padding-top: 20px; /* Thêm padding nếu cần khoảng cách từ đầu */
+  margin-top: 0;
+  padding-top: 20px;
 }
 
 .banner-midle-content {
   display: flex;
   flex-direction: column;
 }
+
 .banner-midle-content-image {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
+
 .text-content-header {
   color: white;
   font-size: 14px;
@@ -48,11 +53,12 @@
   color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 .modal {
   width: 1440px;
   height: 593px;
-  background: rgba(4, 64, 38, 0.5); /* Màu nền với độ trong suốt */
-  backdrop-filter: blur(1px); /* Độ mờ của nền */
+  background: rgba(4, 64, 38, 0.5);
+  backdrop-filter: blur(1px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,39 +81,133 @@
   border-radius: 10px;
   border: none;
 }
+
 .image-mot {
   text-align: center;
   padding-top: 20px;
 }
+
 .text-container {
   display: flex;
   align-items: end;
   flex-direction: column;
   padding: 5px 20px 0 20px;
 }
+
 .text-banner {
   padding-left: 20px;
   color: white;
 }
+
 .text-banner-black {
   padding-left: 20px;
   color: rgb(9, 9, 9);
 }
+
 .modal-1 {
-  width: 1193;
+  width: 1193px;
   height: 217px;
-  background: rgba(4, 64, 38, 0.65); /* Màu nền với độ trong suốt */
-  backdrop-filter: blur(1px); /* Độ mờ của nền */
+  background: rgba(4, 64, 38, 0.65);
+  backdrop-filter: blur(1px);
   display: flex;
   flex-direction: column;
   border-radius: 20px;
   color: #ffffff;
   padding: 10px 10px 5px 40px;
 }
+
 .text-modal-1 {
   max-width: 860px;
 }
+
 .text-banner-content-1 {
   padding: 50px;
 }
 
+/* Responsive Styles */
+@media only screen and (max-width: 1200px) {
+  .banner-midle {
+    height: auto; /* Thay đổi chiều cao để phù hợp với nội dung */
+    /* Thêm padding để đảm bảo nội dung không bị dính vào cạnh màn hình */
+  }
+
+  .modal {
+    width: 100%;
+    height: auto; /* Thay đổi chiều cao để phù hợp với nội dung */
+  }
+
+  .banner-midle-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner-midle-content-image {
+    flex-direction: column;
+    gap: 20px; /* Thêm khoảng cách giữa các hình ảnh */
+  }
+
+  .text-content-header {
+    font-size: 16px; /* Tăng kích thước chữ để dễ đọc trên màn hình nhỏ */
+    max-width: 100%; /* Đảm bảo văn bản không bị cắt */
+    margin-bottom: 20px; /* Giảm khoảng cách dưới cùng */
+  }
+
+  .cta-button-1 {
+    width: auto;
+    height: auto;
+    padding: 10px 20px; /* Điều chỉnh padding cho nút */
+    font-size: 14px; /* Giảm kích thước chữ cho nút */
+  }
+
+  .loader-banner-image,
+  .loader-banner-image-white {
+    width: 100%;
+    height: auto; /* Thay đổi chiều cao để phù hợp với nội dung */
+  }
+
+  .modal-1 {
+    width: 100%;
+    height: auto; /* Thay đổi chiều cao để phù hợp với nội dung */
+    padding: 20px;
+  }
+
+  .text-banner-content-1 {
+    padding: 20px; /* Giảm padding cho các thiết bị nhỏ hơn */
+    font-size: 16px; /* Điều chỉnh kích thước chữ cho dễ đọc trên màn hình nhỏ */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-midle {
+    padding: 10px; /* Thay đổi padding để tiết kiệm không gian */
+    height: auto; /* Đảm bảo chiều cao tự động điều chỉnh theo nội dung */
+  }
+
+  .text-content-header {
+    font-size: 14px; /* Giảm kích thước chữ */
+  }
+
+  .cta-button-1 {
+    font-size: 12px; /* Giảm kích thước chữ cho nút */
+    padding: 8px 16px; /* Điều chỉnh padding */
+  }
+
+  .banner-midle-content-image {
+    flex-direction: column;
+    gap: 10px; /* Điều chỉnh khoảng cách giữa các hình ảnh */
+  }
+
+  .modal-1 {
+    padding: 10px;
+  }
+
+  .text-banner-content-1 {
+    padding: 10px; /* Giảm padding */
+    font-size: 14px; /* Giảm kích thước chữ */
+  }
+  .banner-midle-bottom-background {
+    padding: 10px; /* Giảm padding cho màn hình nhỏ hơn */
+    width: 100vw; /* Đảm bảo chiều rộng luôn là 100% của viewport */
+    height: auto; /* Đảm bảo chiều cao tự động điều chỉnh theo nội dung */
+  }
+}
