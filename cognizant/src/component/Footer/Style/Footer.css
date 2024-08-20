@@ -1,11 +1,11 @@
 .container-inner {
   width: 100%;
-  max-width: 900px;
+  height: 100%;
+  max-width: 1024px;
   margin: 0 auto;
   padding: 30px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   background-color: white;
-  
 }
 
 /* Tiêu đề và phụ đề */
@@ -20,48 +20,31 @@
 .subtitle {
   text-align: center;
   font-size: 16px;
-  color: #666;
-  margin-bottom: 20px;
   color: #044026;
+  margin-bottom: 20px;
 }
 
-
-/* Sử dụng Flexbox để phân chia hai cột */
+/* Bố cục của form */
 .form-grid {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Khoảng cách giữa các cột */
-}
-
-/* Chiều rộng của các cột */
-.col-5 {
-  flex: 1;
-  min-width: 0; /* Đảm bảo không bị tràn */
-  max-width: 50%; /* Để tạo khoảng cách giữa các cột */
-  
-}
-
-/* Định dạng khu vực chứa các trường form */
-.footer-section {
-  display: flex;
-  flex-direction: column; /* Hiển thị các phần tử thẳng xuống dòng */
   justify-content: space-between;
-  flex-grow: 1; 
-  margin-top: 30px;
-  margin-right: 45px;
+  gap: 20px;
+  margin-top: 50px;
 }
 
+/* Chiều rộng của mỗi cột */
+.form-column {
+  display: flex;
+  flex-direction: column;
+  width: 48%; /* Điều chỉnh chiều rộng của mỗi cột để vừa với 2 cột */
+  gap: 15px;
+}
 
 /* Định dạng cho từng nhóm form */
 .form-group {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
-}
-
-/* Định dạng cho các thẻ label */
-.form-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
 }
 
 /* Định dạng cho các input, select và textarea */
@@ -69,46 +52,67 @@
 .form-group select,
 .form-group textarea {
   width: 100%;
-  padding: 7px;
+  padding: 10px;
   border: 1px solid #044026;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
-.form-group textarea {
-  height: 100px; /* Chiều cao của textarea */
-  resize: vertical; /* Cho phép thay đổi kích thước theo chiều dọc */
+textarea {
+  height: 100px;
+  resize: none;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: #007bff; /* Màu viền khi focus */
+  border-color: #6895c5;
   outline: none;
 }
 
 /* Định dạng cho nút submit */
 .submit-button {
-  width: 100%; /* Độ rộng nút submit bằng với form */
+  width: 50%;
   background-color: white;
   border: 1px solid #044026;
-  border-radius: 4px;
+  border-radius: 10px;
   padding: 10px 0;
   color: rgb(255, 0, 0);
-  font-size: 16px;
+  font-size: 13px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  text-transform: uppercase; /* Chữ hoa trên nút */
+  text-transform: uppercase;
   font-weight: bold;
+  text-align: center;
+}
+
+.submit-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .submit-button:hover {
   background-color: #4e7468;
 }
 
-/* Responsive design */
+.full-width {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
 @media (max-width: 768px) {
-  .col-5 {
-    max-width: 100%; /* Hiển thị cột 100% chiều rộng trên màn hình nhỏ */
+  .form-grid {
+    flex-direction: column;
+  }
+
+  .form-column {
+    width: 100%;
+  }
+
+  .submit-button {
+    width: 100%;
   }
 }

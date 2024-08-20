@@ -19,7 +19,7 @@ const FooterMenu = () => {
               <div className="contact-item">
                 <EnvironmentOutlined />
                 <span>
-                  No.7, 9th Street, Binh An ward, Dist 2, Ho Chi Minh City
+                  3rd Floor, Vietcom Building 7-9 Dang Thai Mai St, Ward 7, Phu Nhuan Dist, HCMC
                 </span>
               </div>
               <div className="contact-item">
