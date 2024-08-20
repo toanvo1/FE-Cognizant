@@ -68,7 +68,6 @@ const Header = () => {
           <div className="image">
             <img src={logo} alt="logo" className="logo" />
           </div>
-
           {(!isMobile || menuOpen) && (
             <>
               <div>
@@ -154,7 +153,7 @@ const Header = () => {
             />
           </div>
         </div>
-        {menuOpen && (
+        {(menuOpen || !isMobile) && (
           <div className="form-container">
             {selectedForm === "industries" && <IndustriesForm />}
             {selectedForm === "service" && <ServiceForm />}

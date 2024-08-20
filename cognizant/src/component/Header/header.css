@@ -30,7 +30,7 @@
   object-fit: contain;
 }
 .button {
-  display: inline-block;
+  /* display: inline-block; */
   border: none;
   padding: 10px 20px;
   cursor: pointer;
