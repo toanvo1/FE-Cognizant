@@ -1,0 +1,45 @@
+.footer-top-container {
+    background-color: #044026;
+    width: 100%;
+    padding: 40px 0;
+  }
+  
+  .footer-top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .footer-top-left {
+    color: white;
+    flex: 2; /* Tăng giá trị flex để phần bên trái rộng hơn */
+    max-width: 60%; /* Tăng max-width để phần bên trái chiếm nhiều diện tích hơn */
+  }
+  
+  .footer-top-left h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-top-left p {
+    font-size: 18px;
+  }
+  
+  .footer-top-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+  }
+  
+  .footer-logo {
+    max-height: 60px;
+    margin-left: 20px; /* Adds spacing between logos */
+  }
+  
+  .footer-logo:first-child {
+    margin-left: 0; /* Remove margin from the first logo */
+  }
+  
