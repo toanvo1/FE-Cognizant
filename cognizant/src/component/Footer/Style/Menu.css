@@ -1,7 +1,7 @@
 .footer-container {
   display: flex;
   justify-content: space-between;
-  background-color: #044026;
+  /* background-color: #044026; */
   color: #FFFFFF;
   padding: 20px 60px;
   font-family: Arial, sans-serif;
