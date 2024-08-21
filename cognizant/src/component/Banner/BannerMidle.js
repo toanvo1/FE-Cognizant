@@ -83,22 +83,29 @@ const BannerMidle = () => {
           reimagine processes and transform experiences so they stay ahead in a
           fast-changing world.
         </div>
-        <div className="modal-1">
-          <div>
-            Artnering with World Economic Forum to improve everyday life
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",         
+          }}
+        >
+          <div className="modal-1">
+            <div>
+              Artnering with World Economic Forum to improve everyday life
+            </div>
+            <div className="text-modal-1">
+              <p>
+                We’re partnering with WEF to chart new paths to progress on
+                complex global challenges like responsible AI, education and
+                skilling for tomorrow’s workforce and advancing the energy
+                transition.
+              </p>
+            </div>
+            <div> Discover new thinking</div>
           </div>
-          <div className="text-modal-1">
-            <p>
-              We’re partnering with WEF to chart new paths to progress on
-              complex global challenges like responsible AI, education and
-              skilling for tomorrow’s workforce and advancing the energy
-              transition.
-            </p>
-          </div>
-          <div> Discover new thinking</div>
         </div>
       </div>
-    <BannerMidleBottom />
+      <BannerMidleBottom />
     </div>
   );
 };
