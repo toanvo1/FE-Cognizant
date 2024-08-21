@@ -117,20 +117,6 @@ const Header = () => {
               <div>
                 <div
                   className={`button ${
-                    selectedForm === "about" ? "selected" : ""
-                  }`}
-                  onClick={() => handleClick("about")}
-                >
-                  RESOURCE
-                  <FontAwesomeIcon
-                    icon={selectedForm === "about" ? faCaretUp : faCaretDown}
-                    className="icon"
-                  />
-                </div>
-              </div>
-              <div>
-                <div
-                  className={`button ${
                     selectedForm === "contact" ? "selected" : ""
                   }`}
                   onClick={() => handleClick("contact")}
