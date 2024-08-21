@@ -61,12 +61,11 @@
   .footer-logo:first-child {
     margin-left: 0; /* Remove margin from the first logo */
   }
-  
-  /* Khi kích thước màn hình nhỏ hơn 1024px */
+ /* Khi kích thước màn hình nhỏ hơn 1024px */
 @media (max-width: 1024px) {
   .footer-top-content {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       text-align: center;
   }
 
@@ -103,21 +102,23 @@
 
   .footer-top-right {
       flex-direction: column;
+      justify-content: center; /* Căn giữa nội dung khi theo chiều dọc */
+      align-items: center;
   }
 
   .footer-logo {
       margin-left: 0;
       margin-bottom: 10px;
   }
+
   .footer-row {
-    flex-direction: column;
-    align-items: center;
+      flex-direction: column;
+      align-items: center;
   }
 
   .footer-column {
-    width: 100%; /* Chuyển các cột thành hàng đầy đủ chiều rộng trên màn hình nhỏ */
+      width: 100%;
   }
-  
 }
 
 /* Khi kích thước màn hình nhỏ hơn 480px */
@@ -137,6 +138,7 @@
   .footer-top-right {
       flex-direction: column;
       align-items: center;
+      justify-content: center; /* Đảm bảo căn giữa nội dung trên màn hình nhỏ */
   }
 
   .footer-logo {
