@@ -77,7 +77,7 @@
 .footer-column h4::after {
   content: "";
   margin-top: 10px;
-  width: 100%;
+  width: 60%;
   height: 2.5px;
   background-color: #EA5A47;
   position: absolute;
@@ -98,4 +98,97 @@
   display: block;
   color: #EA5A47;
   text-decoration: none;
+}
+
+/* Responsive Design */
+
+/* Khi kích thước màn hình nhỏ hơn 1024px */
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: column;
+    padding: 20px 40px;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .footer-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-logo {
+    width: 250px;
+  }
+
+  .contact-item svg {
+    font-size: 20px;
+  }
+
+  .contact-item span {
+    font-size: 14px;
+  }
+}
+
+/* Khi kích thước màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 20px 30px;
+  }
+
+  .footer-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 200px;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+
+  .footer-right-bottom {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+/* Khi kích thước màn hình nhỏ hơn 480px */
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 20px 20px;
+  }
+
+  .footer-left,
+  .footer-right {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 150px;
+  }
+
+  .footer-column {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .footer-link {
+    font-size: 12px;
+  }
+
+  .contact-item svg {
+    font-size: 18px;
+  }
+
+  .contact-item span {
+    font-size: 12px;
+  }
 }
