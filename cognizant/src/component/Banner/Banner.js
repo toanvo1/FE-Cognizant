@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from "react";
 import "../container.css";
 import "./style/Banner.css";
-import logo from "../../image/logo.png";
-import logo2 from "../../image/background-dep-don-gian.jpg";
-import logo3 from "../../image/logo.png";
+import logo from "../../image/Graphics-1.png";
+import logo2 from "../../image/Graphics-2.png";
+import logo3 from "../../image/Graphics-3.png";
+import vector from "../../image/Chevron.png";
 import BannerMidle from "./BannerMidle";
 import FooterTop from "../Footer/FooterTop";
- 
 
 const contentArray = [
   {
-    text: "In power5 the greatest solution for you",
+    text: "The Power to Innovate",
     description:
-      "At Power5, our vision is to redefine the way technology enhances everyday life, creating a smarter, more interconnected world. We believe that innovation should not only be about advancing technology, but also about empowering people and communities to achieve their full potential.",
+      "Achieve new levels of efficiency, scalability, and growth through customized technological solutions.",
     image: logo,
   },
   {
-    text: "Next solution for you",
+    text: "The Power to Cooperate",
     description:
       "Discover how our latest technology solutions are changing the way businesses operate and thrive in a digital world.",
     image: logo2,
   },
   {
-    text: "Another great solution",
+    text: "The Power to Connect",
     description:
       "Explore the innovative ways we are leveraging technology to drive growth and transformation across industries.",
     image: logo3,
@@ -58,12 +58,19 @@ const Banner = () => {
               <i className="fas fa-play">Get Started</i>
             </button>
             <div className="bottom-navigation">
-              <ul>
-                <li>Careers</li>
-                <li>News</li>
-                <li>Events</li>
-                <li>Investor</li>
-              </ul>
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                <div style={{ paddingTop: "32px" }}>
+                  <img src={vector} alt="logo123" />
+                </div>
+                <div>
+                  <ul>
+                    <li>Careers</li>
+                    <li>News</li>
+                    <li>Events</li>
+                    <li>Investor</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
           <div className="right-section">
@@ -75,8 +82,19 @@ const Banner = () => {
           </div>
         </div>
         <div className="description-banner">
-          Cognizant helps companies modernize technology, reimagine processes
-          and transform experiences so they stay ahead in a fast-changing world.
+          <div>
+            Power 5 strives to help businesses{" "}
+            <span style={{ color: "#E44D27" }}>maximize</span> their potential
+            through
+            <br />
+            expert insights and cutting-edge technology,
+          </div>
+          <div>
+            enabling them to{" "}
+            <span style={{ color: "#E44D27" }}>facilitate</span> growth and{" "}
+            <span style={{ color: "#E44D27" }}>adapt</span> to ever-changing
+            market demands.
+          </div>
         </div>
       </div>
       <BannerMidle />

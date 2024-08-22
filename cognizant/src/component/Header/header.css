@@ -60,7 +60,7 @@
   box-sizing: border-box;
   width: 100%;
   max-width: 400px; /* Chiều rộng tối đa trên màn hình lớn */
- /* Căn giữa container */
+  /* Căn giữa container */
 }
 
 .search-icon {

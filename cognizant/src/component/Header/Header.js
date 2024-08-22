@@ -1,39 +1,58 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../container.css";
 import { Link } from "react-router-dom";
 import logo from "../../image/logo.png";
 import "../Header/header.css";
 import IndustriesForm from "../Header/MenuHeader/Menu/IndustriesForm";
 import ServiceForm from "../Header/MenuHeader/Menu/ServiceForm";
-
 import AboutForm from "../Header/MenuHeader/Menu/AboutForm";
+import Contanct from "./MenuHeader/Menu/Contanct";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCaretDown,
   faCaretUp,
   faBars,
+  faSearch,
 } from "@fortawesome/free-solid-svg-icons";
-import Contanct from "./MenuHeader/Menu/Contanct";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [selectedForm, setSelectedForm] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const formRef = useRef(null); // Tham chiếu đến phần tử chứa các form
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768); // Cập nhật trạng thái isMobile dựa trên kích thước màn hình
     };
 
+    const handleScroll = () => {
+      if (formRef.current) {
+        const { top } = formRef.current.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+
+        if (top < 0) {
+          setSelectedForm(null); // Đóng sidebar và quay lại trang chính
+          // window.scrollTo({ top: 0, behavior: "smooth" }); // Cuộn lên đầu trang mượt mà
+        }
+      }
+    };
+
     handleResize(); // Kiểm tra kích thước màn hình khi component mount
     window.addEventListener("resize", handleResize); // Lắng nghe sự kiện thay đổi kích thước màn hình
+    window.addEventListener("scroll", handleScroll); // Lắng nghe sự kiện cuộn trang
 
-    return () => window.removeEventListener("resize", handleResize); // Cleanup event listener
+    return () => {
+      window.removeEventListener("resize", handleResize); // Cleanup event listener
+      window.removeEventListener("scroll", handleScroll); // Cleanup event listener
+    };
   }, []);
 
   const handleClick = (form) => {
     setSelectedForm(form === selectedForm ? null : form); // Toggle form visibility
+    if (form === null) {
+      window.scrollTo({ top: 0, behavior: "smooth" }); // Cuộn lên đầu trang mượt mà khi đóng
+    }
   };
 
   const toggleMenu = () => {
@@ -140,7 +159,10 @@ const Header = () => {
           </div>
         </div>
         {(menuOpen || !isMobile) && (
-          <div className="form-container">
+          <div
+            className={`form-container ${selectedForm ? "" : "hidden"}`}
+            ref={formRef}
+          >
             {selectedForm === "industries" && <IndustriesForm />}
             {selectedForm === "service" && <ServiceForm />}
             {selectedForm === "about" && <AboutForm />}

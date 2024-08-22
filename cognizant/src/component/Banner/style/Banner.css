@@ -1,11 +1,12 @@
 .landing-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  background-color: #054312; /* Màu nền xanh đậm */
+  background-color: #044026; /* Màu nền xanh đậm */
   padding: 0 50px;
   position: relative;
   overflow: hidden; /* Để ẩn các phần tử ngoài container nếu cần */
+  padding-right: 0;
 }
 
 .left-section,
@@ -31,7 +32,7 @@
 .left-section h2 {
   font-size: 3em;
   margin-bottom: 20px;
-  max-width: 65%;
+  
 }
 
 .left-section p {
@@ -40,7 +41,7 @@
 }
 
 .cta-button {
-  background: linear-gradient(135deg, #84cc2e, #aed43e);
+  background: linear-gradient(135deg, #84cc2e, #0AA663);
   border: none;
   border-radius: 50px;
   padding: 15px 30px;
@@ -70,7 +71,6 @@
   max-height: 100%;
   max-width: 100%;
   object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng */
-  border-top-left-radius: 50px;
   opacity: 0;
   transition: opacity 1s ease; /* Hiệu ứng mờ dần và rõ dần */
 }
@@ -79,13 +79,16 @@
   opacity: 1; /* Hiện hình ảnh khi có lớp 'show' */
 }
 
+
 .bottom-navigation ul {
   list-style-type: none;
   display: flex;
   gap: 20px;
+  padding-top: 20px;
+  margin-top: 20px;
 }
 
-.bottom-navigation li {
+.bottom-navigation li img {
   color: white;
   font-size: 1.2em;
   cursor: pointer;
@@ -111,11 +114,11 @@
 }
 
 .description-banner {
-  font-size: 25px;
-  max-width: 1150px;
+  font-size: 30px;
+  max-width: 1070px;
   padding: 50px;
   color: black; /* Đảm bảo chữ có màu tương phản tốt */
-  background-color: #FFFFFF; /* Màu nền phù hợp */
+  background-color: #ffffff; /* Màu nền phù hợp */
 }
 
 /* Responsive Styles */
@@ -155,6 +158,11 @@
 
   .bottom-navigation li {
     font-size: 1em; /* Giảm kích thước chữ */
+  }
+  .bottom-navigation img {
+    margin-top: 22px; 
+
+
   }
 
   .description-banner {
