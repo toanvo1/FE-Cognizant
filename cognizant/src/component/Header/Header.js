@@ -3,17 +3,17 @@ import "../container.css";
 import { Link } from "react-router-dom";
 import logo from "../../image/logo.png";
 import "../Header/header.css";
-import IndustriesForm from "../Header/MenuHeader/IndustriesForm";
-import ServiceForm from "../Header/MenuHeader/ServiceForm";
-import InsightsForm from "../Header/MenuHeader/InsightsForm";
-import AboutForm from "../Header/MenuHeader/AboutForm";
+import IndustriesForm from "../Header/MenuHeader/Menu/IndustriesForm";
+import ServiceForm from "../Header/MenuHeader/Menu/ServiceForm";
+
+import AboutForm from "../Header/MenuHeader/Menu/AboutForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCaretDown,
   faCaretUp,
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
-import Contanct from "./MenuHeader/Contanct";
+import Contanct from "./MenuHeader/Menu/Contanct";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
@@ -89,13 +89,13 @@ const Header = () => {
               <div>
                 <div
                   className={`button ${
-                    selectedForm === "service" ? "selected" : ""
+                    selectedForm === "about" ? "selected" : ""
                   }`}
-                  onClick={() => handleClick("service")}
+                  onClick={() => handleClick("about")}
                 >
                   ABOUT US
                   <FontAwesomeIcon
-                    icon={selectedForm === "service" ? faCaretUp : faCaretDown}
+                    icon={selectedForm === "about" ? faCaretUp : faCaretDown}
                     className="icon"
                   />
                 </div>
@@ -103,13 +103,13 @@ const Header = () => {
               <div>
                 <div
                   className={`button ${
-                    selectedForm === "insights" ? "selected" : ""
+                    selectedForm === "service" ? "selected" : ""
                   }`}
-                  onClick={() => handleClick("insights")}
+                  onClick={() => handleClick("service")}
                 >
                   SERVICES
                   <FontAwesomeIcon
-                    icon={selectedForm === "insights" ? faCaretUp : faCaretDown}
+                    icon={selectedForm === "service" ? faCaretUp : faCaretDown}
                     className="icon"
                   />
                 </div>
@@ -143,7 +143,6 @@ const Header = () => {
           <div className="form-container">
             {selectedForm === "industries" && <IndustriesForm />}
             {selectedForm === "service" && <ServiceForm />}
-            {selectedForm === "insights" && <InsightsForm />}
             {selectedForm === "about" && <AboutForm />}
             {selectedForm === "contact" && <Contanct />}
           </div>
