@@ -8,15 +8,15 @@ function Footer({ formData = {}, handleChange }) {
     <div>
       <div className="container">
         <div className="container-inner">
-          <h2 className="title">Please Leave Your Information Below</h2>
-          <p className="subtitle">To Match Your Business Goals</p>
+          <h2 className="title">Ready to accelerate your business?</h2>
+          <p className="subtitle">We’re here to help and answer any questions you might have.</p>
           <div className="form-grid">
             <div className="form-column">
               <div className="form-group">
                 <input
                   type="text"
                   name="name"
-                  placeholder="Nhập họ và tên"
+                  placeholder="Name*"
                   required
                 />
               </div>
@@ -43,7 +43,7 @@ function Footer({ formData = {}, handleChange }) {
                 <input
                   type="text"
                   name="companyName"
-                  placeholder="Nhập tên công ty"
+                  placeholder="Organization*"
                   required
                 />
               </div>
@@ -76,13 +76,13 @@ function Footer({ formData = {}, handleChange }) {
             <textarea
               id="request"
               name="request"
-              placeholder="Nhập yêu cầu ..."
+              placeholder="Message"
               required
             />
           </div>
           <div className="submit-button-container">
             <button type="submit" className="submit-button">
-              Đăng kí ngay
+              Submit
             </button>
           </div>
         </div>

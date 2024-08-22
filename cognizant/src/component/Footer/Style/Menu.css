@@ -1,23 +1,42 @@
+/* Menu.css */
+
+/* General footer container styling */
 .footer-container {
   display: flex;
   justify-content: space-between;
-  /* background-color: #044026; */
+  background-color: #044026;
   color: #FFFFFF;
-  padding: 20px 60px;
+  padding: 40px 60px;
   font-family: Arial, sans-serif;
 }
 
+/* Left section styling */
 .footer-left {
-  flex: 1;
-  max-width: 570px;
+  flex: 0 0 40%; /* 40% width */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-
 .footer-logo {
   width: 300px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  border-bottom: 2.2px solid #EC652B; /* Added underline for logo */
+}
+.footer-logo::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  background-color: #EC652B; /* Color of the underline */
+  position: absolute;
+  bottom: -10px; /* Adjust this value to increase or decrease the space */
+  left: 0;
+}
+.footer-title h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #ffffff;
 }
 
 .footer-contact {
@@ -26,169 +45,79 @@
 
 .contact-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 15px;
 }
 
 .contact-item svg {
-  color: #EA5A47;
-  font-size: 25px;
-  margin-right: 20px;
+  color: #EC652B;
+  font-size: 22px;
+  margin-right: 10px;
 }
 
 .contact-item span {
-  font-size: 16px;
-  line-height: 2.5;
+  font-size: 14px;
+  line-height: 1.8;
   color: #FFFFFF;
 }
 
-.footer-right-bottom {
-  margin-top: auto;
-  font-size: 18px;
+.contact-item p {
+  margin: 0; /* Remove margin from the <p> tag inside .contact-item */
 }
 
-.footer-right {
+/* Middle section styling */
+.footer-middle {
+  flex: 0 0 40%; /* 40% width */
   display: flex;
-  flex: 1;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .footer-column {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  width: 20%;
-  text-align: center;
-  gap: 15px;
+  text-align: left;
+  gap: 10px;
 }
+
 .footer-column h4 {
-  margin-bottom: 1px;
-  color: #EA5A47;
-  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #EC652B;
+  text-align: center;
   position: relative;
   padding-bottom: 10px;
-  font-family: Roboto;
-}
-.contact-item p {
-  margin: 0;
-  line-height: 1.2; /* Điều chỉnh line-height để giảm khoảng cách giữa các dòng */
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
 }
 
 .footer-column h4::after {
   content: "";
-  margin-top: 10px;
-  width: 60%;
-  height: 2.5px;
-  background-color: #EA5A47;
+  width: 100%; /* Full width underline */
+  height: 2.2px;
+  background-color: #EC652B;
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
 }
 
 .footer-link {
   display: block;
   color: #e5ecf4;
   text-decoration: none;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-size: 14px;
+  text-align: left;
 }
 
 .footer-link:hover {
-  display: block;
-  color: #EA5A47;
-  text-decoration: none;
+  color: #EC652B;
 }
 
-/* Responsive Design */
 
-/* Khi kích thước màn hình nhỏ hơn 1024px */
-@media (max-width: 1024px) {
-  .footer-container {
-    flex-direction: column;
-    padding: 20px 40px;
-  }
-
-  .footer-right {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-
-  .footer-column {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .footer-logo {
-    width: 250px;
-  }
-
-  .contact-item svg {
-    font-size: 20px;
-  }
-
-  .contact-item span {
-    font-size: 14px;
-  }
-}
-
-/* Khi kích thước màn hình nhỏ hơn 768px */
-@media (max-width: 768px) {
-  .footer-container {
-    padding: 20px 30px;
-  }
-
-  .footer-left {
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-logo {
-    width: 200px;
-  }
-
-  .footer-column {
-    width: 100%;
-  }
-
-  .footer-right-bottom {
-    text-align: center;
-    margin-top: 20px;
-  }
-}
-
-/* Khi kích thước màn hình nhỏ hơn 480px */
-@media (max-width: 480px) {
-  .footer-container {
-    padding: 20px 20px;
-  }
-
-  .footer-left,
-  .footer-right {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-logo {
-    width: 150px;
-  }
-
-  .footer-column {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
-  .footer-link {
-    font-size: 12px;
-  }
-
-  .contact-item svg {
-    font-size: 18px;
-  }
-
-  .contact-item span {
-    font-size: 12px;
-  }
+/* Right section styling */
+.footer-right {
+  flex: 0 0 15%; /* Reduced from 20% to 15% width */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
