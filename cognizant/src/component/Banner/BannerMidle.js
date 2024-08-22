@@ -10,12 +10,13 @@ const BannerMidle = () => {
         <div class="modal">
           <div className="banner-midle-content">
             <div>
-              <h2 style={{ color: "white" }}>In power5</h2>
+              <h2 style={{ color: "white" }}>Our Services</h2>
             </div>
             <div>
               <div className="text-content-header">
-                At Power5, our vision is to redefine the way technology enhances
-                everyday life, creating a smarter, more interconnected world.{" "}
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam
               </div>
               <div className="banner-midle-content-image">
                 <div className="loader-banner-image">
@@ -86,7 +87,7 @@ const BannerMidle = () => {
         <div
           style={{
             display: "flex",
-            justifyContent: "center",         
+            justifyContent: "center",
           }}
         >
           <div className="modal-1">
