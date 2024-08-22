@@ -24,13 +24,55 @@
   display: flex;
   flex-direction: column;
 }
+.icon-container-banner {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
 
+.box-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(4, 64, 38, 1); /* Màu nền */
+  color: white; /* Màu biểu tượng */
+  border-radius: 8px; /* Bo góc */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.box-icon:hover {
+  background-color: white; /* Thay đổi màu nền khi hover */
+  color: rgba(4, 64, 38, 1); /* Thay đổi màu biểu tượng khi hover */
+}
+
+.box-icon svg {
+  font-size: 20px; /* Kích thước biểu tượng */
+}
+
+.slideShow-banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* Slideshow */
+.banner-midle-content-image .loader-banner-image {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.banner-midle-content-image .loader-banner-image.active {
+  display: block;
+}
 .banner-midle-content-image {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
-
 .text-content-header {
   color: white;
   font-size: 14px;
@@ -38,9 +80,8 @@
   max-width: 503px;
   margin-bottom: 40px;
 }
-
 .cta-button-1 {
-  background: linear-gradient(1deg, #044026, #ffffff);
+  background: rgba(10, 166, 99, 1);
   border: none;
   border-radius: 50px;
   padding: 15px 30px;
@@ -53,7 +94,6 @@
   color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
 .modal {
   width: 1440px;
   height: 593px;
@@ -63,7 +103,6 @@
   align-items: center;
   justify-content: center;
 }
-
 .loader-banner-image {
   width: 311px;
   height: 363px;
@@ -72,7 +111,6 @@
   border-radius: 10px;
   border: none;
 }
-
 .loader-banner-image-white {
   width: 311px;
   height: 363px;
@@ -81,12 +119,10 @@
   border-radius: 10px;
   border: none;
 }
-
 .image-mot {
   text-align: center;
   padding-top: 20px;
 }
-
 .text-container {
   display: flex;
   align-items: end;
@@ -98,15 +134,16 @@
   padding-left: 20px;
   color: white;
 }
-
 .text-banner-black {
+  font-weight: 650;
+  font-size: 20px;
   padding-left: 20px;
-  color: rgb(9, 9, 9);
+  color: rgba(10, 166, 99, 1);
 }
 
 .modal-1 {
-  width: 1193px;
-  height: 217px;
+  width: 1088px;
+  height: 266px;
   background: rgba(4, 64, 38, 0.65);
   backdrop-filter: blur(1px);
   display: flex;
@@ -117,9 +154,12 @@
 }
 
 .text-modal-1 {
-  max-width: 860px;
+  max-width: 1000px;
 }
-
+.text-modal-1 p {
+  line-height: 1.5;
+  font-size: 24px;
+}
 .text-banner-content-1 {
   padding: 50px;
 }
@@ -209,5 +249,17 @@
     padding: 10px; /* Giảm padding cho màn hình nhỏ hơn */
     width: 100vw; /* Đảm bảo chiều rộng luôn là 100% của viewport */
     height: auto; /* Đảm bảo chiều cao tự động điều chỉnh theo nội dung */
+  }
+  .icon-container-banner {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+  .box-icon {
+    width: 35px;
+    height: 30px;
+  }
+  .image-mot {
+    padding: 10px;
   }
 }
