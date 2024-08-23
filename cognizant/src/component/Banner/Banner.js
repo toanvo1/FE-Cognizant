@@ -4,6 +4,8 @@ import "./style/Banner.css";
 import logo from "../../image/Graphics-1.png";
 import logo2 from "../../image/Graphics-2.png";
 import logo3 from "../../image/Graphics-3.png";
+import logo4 from "../../image/Graphics-4.png";
+import logo5 from "../../image/Graphics-5.png";
 import vector from "../../image/Chevron.png";
 import BannerMidle from "./BannerMidle";
 import FooterTop from "../Footer/FooterTop";
@@ -26,6 +28,18 @@ const contentArray = [
     description:
       "Explore the innovative ways we are leveraging technology to drive growth and transformation across industries.",
     image: logo3,
+  },
+  {
+    text: "The Power to Collaborate",
+    description:
+      "Achieve new levels of efficiency, scalability, and growth through customized technological solutions.",
+    image: logo4,
+  },
+  {
+    text: "The Power to Advance",
+    description:
+      "Spend less time managing finances and more time growing business with expert accounting solutions.",
+    image: logo5,
   },
 ];
 
