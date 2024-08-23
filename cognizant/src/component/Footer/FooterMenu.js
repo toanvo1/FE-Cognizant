@@ -10,7 +10,9 @@ const FooterMenu = () => {
       <div className="container">
       <footer className="footer-container">
           <div className="footer-left">
-            <img src={logo} className="footer-logo" alt="Logo" />
+            <div className="footer-logo2">
+              <img src={logo} alt="Logo" />
+            </div>
             <h4 className="footer-company-name">Power 5 Company Limited</h4>
             <div className="footer-contact">
               <div className="contact-item">
@@ -57,8 +59,6 @@ const FooterMenu = () => {
               <h4>About</h4>
               <Link className="footer-link" to="#">About Power 5</Link>
               <Link className="footer-link" to="#">Clients & Partnerships</Link>
-            </div>
-            <div className="footer-column contact">
               <h4>Contact</h4>
               <Link className="footer-link" to="#">Contact Us</Link>
             </div>
