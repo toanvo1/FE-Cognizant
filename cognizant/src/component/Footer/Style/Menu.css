@@ -1,5 +1,3 @@
-/* Menu.css */
-
 /* General footer container styling */
 .footer-container {
   display: flex;
@@ -17,21 +15,39 @@
   flex-direction: column;
   align-items: flex-start;
 }
-.footer-logo {
-  width: 300px;
+
+.footer-company-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+.footer-logo2 {
+  position: relative;
+  max-width: 100%;
+  max-width: 350px;
+  margin-top: 30px;
   margin-bottom: 10px;
-  border-bottom: 2.2px solid #EC652B; /* Added underline for logo */
+  padding-bottom: 20px;
 }
-.footer-logo::after {
+
+.footer-logo2 img {
+  width: 100%; /* Ensure image is responsive */
+  max-width: 350px; /* Maximum width for large screens */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.footer-logo2::after {
   content: "";
-  display: block;
-  width: 100%;
-  height: 2px; /* Thickness of the underline */
-  background-color: #EC652B; /* Color of the underline */
   position: absolute;
-  bottom: -10px; /* Adjust this value to increase or decrease the space */
-  left: 0;
+  left: 0; /* Align to the left edge of the container */
+  bottom: 0;
+  width: 134%; /* Full width underline */
+  height: 2.5px; /* Thickness of the border */
+  background-color: #EC652B; /* Border color */
 }
+
 .footer-title h2 {
   font-size: 20px;
   font-weight: bold;
@@ -40,34 +56,36 @@
 }
 
 .footer-contact {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .contact-item {
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 15px;
+  align-items: center; /* Vertically center items */
+  gap: 10px; /* Spacing between icon and text */
 }
 
 .contact-item svg {
   color: #EC652B;
-  font-size: 22px;
-  margin-right: 10px;
+  font-size: 25px; /* Icon size */
+  margin-right: 15px; /* Spacing from the text */
 }
 
 .contact-item span {
-  font-size: 14px;
-  line-height: 1.8;
+  font-size: 17px;
+  line-height: 1.5;
   color: #FFFFFF;
 }
 
 .contact-item p {
-  margin: 0; /* Remove margin from the <p> tag inside .contact-item */
+  margin: 0; /* Remove margin from the paragraph */
 }
 
 /* Middle section styling */
 .footer-middle {
-  flex: 0 0 40%; /* 40% width */
+  flex: 0 0 40%; /* 43% width */
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -86,14 +104,14 @@
   text-align: center;
   position: relative;
   padding-bottom: 10px;
-  font-family: Roboto, sans-serif;
-  font-size: 16px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 20px;
 }
 
 .footer-column h4::after {
   content: "";
   width: 100%; /* Full width underline */
-  height: 2.2px;
+  height: 2.5px;
   background-color: #EC652B;
   position: absolute;
   bottom: 0;
@@ -105,7 +123,7 @@
   color: #e5ecf4;
   text-decoration: none;
   margin-bottom: 8px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: left;
 }
 
@@ -113,11 +131,18 @@
   color: #EC652B;
 }
 
-
 /* Right section styling */
 .footer-right {
-  flex: 0 0 15%; /* Reduced from 20% to 15% width */
+  flex: 0 0 15%; /* Width of the right section */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.footer-right .about,
+.footer-right .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between links */
+  margin-bottom: 30px; /* Space between sections */
 }

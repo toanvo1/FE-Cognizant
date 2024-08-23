@@ -22,52 +22,48 @@ function Footer({ formData = {}, handleChange }) {
               </div>
               <div className="form-group">
                 <input
-                  type="tel"
-                  name="phoneNumber"
-                  placeholder="+84 3345 9145"
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Nhập Email"
-                  required
-                />
-              </div>
-            </div>
-
-            <div className="form-column">
-              <div className="form-group">
-                <input
                   type="text"
                   name="companyName"
                   placeholder="Organization*"
                   required
                 />
               </div>
+              
               <div className="form-group">
                 <input
                   type="text"
-                  name="position"
-                  placeholder="Nhập chức danh"
+                  name="region"
+                  placeholder="Region*"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="form-column">
+            <div className="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email*"
+                  required
+                />
+              </div>
+              
+              <div className="form-group">
+                <input
+                  type="tel"
+                  name="phoneNumber"
+                  placeholder="+84 Contact Number*"
                   required
                 />
               </div>
               <div className="form-group">
-                <select
-                  id="companySize"
-                  name="companySize"
-                  value={formData.companySize || ""}
-                  onChange={handleChange}
+                <input
+                  type="text"
+                  name="inquiryType"
+                  placeholder="Inquiry Type*"
                   required
-                >
-                  <option value="">Chọn quy mô</option>
-                  <option value="small">Small</option>
-                  <option value="medium">Medium</option>
-                  <option value="large">Large</option>
-                </select>
+                />
               </div>
             </div>
           </div>
