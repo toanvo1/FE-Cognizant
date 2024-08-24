@@ -10,6 +10,7 @@ import logo3 from "../../image/AllxOne.png";
 import logo4 from "../../image/seb.png";
 import logo5 from "../../image/edutek.png";
 import logo6 from "../../image/tesse.png";
+import uploadedImage from "../../image/BlankPadding.png"; // Import your uploaded image
 
 const FooterTop = () => {
   const settings = {
@@ -17,14 +18,14 @@ const FooterTop = () => {
     speed: 10000, // Slower transition speed (10 seconds) for smooth scrolling
     slidesToShow: 3, // Display 3 logos at a time
     slidesToScroll: 1, // Scroll 1 logo at a time
-    autoplay: true, // Enable automatic scrolling
-    autoplaySpeed: 10, // Set autoplay speed to 0 for continuous scrolling
-    cssEase: "linear", // Linear transition for a consistent scrolling effect
-    pauseOnHover: false, // Prevent pause on hover
-    arrows: false, // Hide navigation arrows
-    dots: false // Hide navigation dots
+    autoplay: true, 
+    autoplaySpeed: 10, 
+    cssEase: "linear", 
+    pauseOnHover: false, 
+    arrows: false, 
+    dots: false 
   };
-  
+
   return (
     <div className="footer-top-container">
       <div className="container">
