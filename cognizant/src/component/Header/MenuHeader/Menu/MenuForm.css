@@ -9,77 +9,89 @@
 
 /* Sidebar */
 .sidebar {
-  width: 250px;
-  background-color: #343a40;
+  width: 420px; /* Chiều rộng sidebar */
+  background-color: #044026; /* Màu nền sidebar */
   color: #fff;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
-  transition: transform 0.9s ease; /* Hiệu ứng chuyển động khi mở/đóng */
-  opacity: 1;
-}
-.sidebar.hidden {
-  transform: translateX(-100%); /* Đưa sidebar ra ngoài màn hình khi đóng */
-  opacity: 0; /* Mờ dần khi đóng */
-  pointer-events: none; /* Ngăn không cho sidebar nhận sự kiện chuột khi bị đóng */
-}
-.sidebar h3 {
-  margin-bottom: 20px;
-  font-size: 1.5em;
-  font-weight: bold;
-  text-align: center;
-  color: #f8f9fa;
-  text-transform: uppercase;
 }
 
 .sidebar ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .sidebar li {
-  margin: 10px 0;
+  margin: 0;
+  padding: 0;
+  
 }
 
 .sidebar button {
   width: 100%;
-  background-color: #495057;
+  background-color: transparent;
   color: #fff;
   border: none;
-  padding: 15px;
-  text-align: left;
-  font-size: 1em;
+  padding: 20px ; /* Điều chỉnh padding để khoảng cách đều hơn */
+  font-size: 1.2em;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Đảm bảo icon và văn bản bắt đầu từ đầu */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 60px; /* Đảm bảo chiều cao nút nhất quán */
 }
 
-.sidebar button:hover {
-  background-color: #6c757d;
-  transform: translateX(10px);
+/* Styling for the Icon */
+.sidebar button .icon {
+  margin-right: 10px; /* Khoảng cách giữa icon và văn bản */
+  font-size: 1.5em; /* Kích thước icon */
+  width: 30px; /* Đặt chiều rộng cho icon */
+  height: 30px; /* Đặt chiều cao cho icon */
+  transition: transform 0.3s ease; /* Hiệu ứng khi hover */
+  flex-shrink: 0; /* Đảm bảo icon không bị co lại */
+  display: flex; /* Đảm bảo icon luôn căn giữa theo chiều dọc */
+  align-items: center; /* Căn giữa icon theo chiều dọc */
+  justify-content: center; /* Đảm bảo icon căn giữa trong vùng của nó */
 }
 
-.sidebar button:focus {
-  outline: none;
-  background-color: #6c757d;
+/* Styling for the Text */
+.sidebar button .button-text {
+  flex-grow: 1; /* Đảm bảo văn bản chiếm hết không gian còn lại */
+  text-align: left; /* Căn trái văn bản */
+  display: flex;
+  padding-left: 10px; /* Tạo khoảng cách giữa icon và văn bản */
+  align-items: center; /* Căn giữa văn bản theo chiều dọc */
+  font-size: 20px;
+  line-height: 1.5em; /* Đảm bảo khoảng cách dòng đồng đều */
 }
 
-/* Content */
+/* Hover and Active States */
+.sidebar button:hover,
+.sidebar button.active {
+  background-color: #fff; /* Màu nền trắng khi hover hoặc active */
+  color: #044026; /* Màu văn bản và icon chuyển thành màu nền sidebar khi hover hoặc active */
+}
+
+.sidebar button:hover .icon,
+.sidebar button.active .icon {
+  transform: scale(1.1); /* Tăng kích thước icon khi hover */
+}
+
+.sidebar button:last-child {
+  border-bottom: none; /* Loại bỏ viền dưới cùng của nút cuối cùng */
+}
+
+/* Nội dung */
 .content {
   flex: 1;
   padding: 40px;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   overflow-y: auto; /* Để cuộn nội dung nếu vượt quá chiều cao */
 }
 
-.content div {
-  margin-bottom: 50px;
-}
-
-.content div:last-child {
-  margin-bottom: 0;
-}
-
+/* Định dạng responsive */
 @media (max-width: 768px) {
   .industries-form {
     flex-direction: column;
@@ -91,6 +103,15 @@
   }
 
   .sidebar button {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .sidebar button .icon {
+    margin-right: 0;
+  }
+
+  .sidebar button .button-text {
     text-align: center;
   }
 }

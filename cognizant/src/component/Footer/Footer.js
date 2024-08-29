@@ -48,14 +48,16 @@ function Footer({ formData = {}, handleChange }) {
                   required
                 />
               </div>
-              
               <div className="form-group">
-                <input
-                  type="tel"
-                  name="phoneNumber"
-                  placeholder="+84 Contact Number*"
-                  required
-                />
+                <div className="phone-input-container">
+                  <input
+                    type="tel"
+                    name="phoneNumber"
+                    placeholder="+84 Contact Number*"
+                    required
+                    className="phone-input"
+                  />
+                </div>
               </div>
               <div className="form-group">
                 <input

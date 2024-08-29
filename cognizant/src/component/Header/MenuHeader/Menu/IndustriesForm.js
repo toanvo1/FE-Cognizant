@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGraduationCap, faDollarSign, faTruck, faFilm } from "@fortawesome/free-solid-svg-icons";
 import Communication from "../Content/IndustriesContent/Communication";
 import Education from "../Content/IndustriesContent/Education";
 import Oils from "../Content/IndustriesContent/Oils";
@@ -15,47 +17,57 @@ const IndustriesForm = () => {
   return (
     <div className="industries-form">
       <div className="sidebar">
-        <h3>Industries Menu</h3>
         <ul>
           <li>
-            <button onClick={() => handleSectionClick("mediatechlogy")}>
-              Communications, Media & Technology
+            <button 
+              className={activeSection === "education" ? "active" : ""}
+              onClick={() => handleSectionClick("education")}
+            >
+              <span className="icon">
+                <FontAwesomeIcon icon={faGraduationCap} />
+              </span>
+              <span className="button-text">Education</span>
             </button>
           </li>
           <li>
-            <button onClick={() => handleSectionClick("education")}>
-              Education
+            <button 
+              className={activeSection === "retail" ? "active" : ""}
+              onClick={() => handleSectionClick("retail")}
+            >
+              <span className="icon">
+                <FontAwesomeIcon icon={faDollarSign} />
+              </span>
+              <span className="button-text">Retail</span>
             </button>
           </li>
           <li>
-            <button onClick={() => handleSectionClick("oilgas")}>
-              Oil & Gas
+            <button 
+              className={activeSection === "transportation" ? "active" : ""}
+              onClick={() => handleSectionClick("transportation")}
+            >
+              <span className="icon">
+                <FontAwesomeIcon icon={faTruck} />
+              </span>
+              <span className="button-text">Transportation & Logistics</span>
             </button>
           </li>
           <li>
-            <button onClick={() => handleSectionClick("retail")}>Retail</button>
-          </li>
-          <li>
-            <button onClick={() => handleSectionClick("transportation")}>
-              Transportation & Logistics
+            <button 
+              className={activeSection === "mediatechlogy" ? "active" : ""}
+              onClick={() => handleSectionClick("mediatechlogy")}
+            >
+              <span className="icon">
+                <FontAwesomeIcon icon={faFilm} />
+              </span>
+              <span className="button-text">Communications, Media & Technology</span>
             </button>
           </li>
         </ul>
       </div>
       <div className="content">
-        {activeSection === "mediatechlogy" && (
-          <div id="mediatechlogy">
-            <Communication />
-          </div>
-        )}
         {activeSection === "education" && (
           <div id="education">
             <Education />
-          </div>
-        )}
-        {activeSection === "oilgas" && (
-          <div id="oilgas">
-            <Oils />
           </div>
         )}
         {activeSection === "retail" && (
@@ -66,6 +78,16 @@ const IndustriesForm = () => {
         {activeSection === "transportation" && (
           <div id="transportation">
             <Transportation />
+          </div>
+        )}
+        {activeSection === "mediatechlogy" && (
+          <div id="mediatechlogy">
+            <Communication />
+          </div>
+        )}
+        {activeSection === "oilgas" && (
+          <div id="oilgas">
+            <Oils />
           </div>
         )}
       </div>
