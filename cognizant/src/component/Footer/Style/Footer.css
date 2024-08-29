@@ -61,11 +61,10 @@ body, input, select, textarea, button {
   border: 1px solid #044026;
   border-radius: 8px;
   font-size: 16px;
-  font-family: "Arial", sans-serif; /* Ensure consistency in form elements */
+  font-family: "Arial", sans-serif;
   color: #044026;
   box-sizing: border-box;
 }
-
 textarea {
   height: 100px;
   resize: none;
@@ -123,9 +122,20 @@ textarea {
 }
 
 .full-width textarea:focus {
-  border-color: #000306; /* Border color on focus */
+  border-color: #044026; /* Border color on focus */
   outline: none; /* Remove default outline */
 }
+
+/* Container for the phone input field */
+.phone-input-container {
+  display: flex;
+  align-items: center;
+  border: 0px solid #044026; /* Green border */
+  border-radius: 8px;
+  width: 100%;
+  background-color: #ffffff; /* White background */
+}
+
 
 /* Responsive Design */
 

@@ -3,7 +3,7 @@ import React from 'react';
 const Contanct = () => {
   return (
     <div>
-      Contanct
+      Contanctaaa
     </div>
   );
 }
