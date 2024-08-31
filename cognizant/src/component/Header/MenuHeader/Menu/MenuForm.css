@@ -86,7 +86,6 @@
 /* Nội dung */
 .content {
   flex: 1;
-  padding: 40px;
   background-color: #ffffff;
   overflow-y: auto; /* Để cuộn nội dung nếu vượt quá chiều cao */
 }
