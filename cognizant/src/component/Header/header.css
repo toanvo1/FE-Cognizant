@@ -12,7 +12,7 @@
   justify-content: flex-end;
   padding: 10px 5px;
   gap: 20px;
-  background-color: #f2f2f2; /* Màu xám nền giống hình ảnh */
+ 
   color: #ea5a47;
   text-decoration: none;
 }
@@ -20,7 +20,7 @@
   display: flex;
   align-items: flex-end; /* Căn chỉnh logo và các nút điều hướng xuống đáy */
   padding: 20px 0px;
-  background-color: #f2f2f2; /* Màu xám nền giống hình ảnh */
+
 }
 .nav-links {
   display: flex;
@@ -96,70 +96,47 @@
 @media only screen and (max-width: 768px) {
   .header-1,
   .header-2 {
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 10px;
-  }
-
-  .header-2 {
-    width: 100%;
-    gap: 10px;
-  }
-
-  .image {
-    margin-bottom: 10px;
-    text-align: center;
-    width: 100%;
+    flex-direction: column; /* Chuyển các phần tử thành cột */
+    align-items: center; /* Căn giữa các phần tử */
+    padding: 10px 0; /* Điều chỉnh padding để căn đều */
+    gap: 10px; /* Khoảng cách giữa các phần tử */
   }
 
   .logo {
-    width: 150px;
+    width: 120px; /* Giảm kích thước logo */
     height: auto;
-    margin: 0 auto;
+    margin-bottom: 10px; /* Thêm khoảng cách giữa logo và các phần khác */
   }
 
-  .menu-icon {
-    font-size: 24px;
-    cursor: pointer;
+  .nav-links {
+    flex-direction: column; /* Chuyển các liên kết điều hướng thành cột */
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa các liên kết */
+    padding-left: 0; /* Loại bỏ padding */
   }
 
   .button {
-    width: 100%;
-    text-align: left;
-    padding: 10px 20px;
+    width: 90%; /* Tăng chiều rộng nút cho điện thoại */
+    text-align: center; /* Căn giữa nội dung nút */
+    padding: 10px;
   }
 
   .search-container {
-    max-width: 100%; /* Chiều rộng tối đa 100% trên màn hình nhỏ */
-    padding: 5px 8px; /* Điều chỉnh padding cho màn hình nhỏ */
-  }
-
-  .search-icon {
-    font-size: 16px; /* Giảm kích thước icon */
-    margin-right: 8px; /* Giảm khoảng cách giữa icon và input */
+    width: 100%; /* Chiều rộng tối đa 100% */
+    margin: 0 auto; /* Căn giữa khung tìm kiếm */
+    padding: 8px 10px; /* Tăng padding để dễ sử dụng hơn */
   }
 
   .search-input-123 {
     font-size: 14px; /* Giảm kích thước font */
-    padding: 6px; /* Điều chỉnh padding cho màn hình nhỏ */
-  }
-  .form-container {
-    width: 100%;
-    margin-top: 10px;
+    padding: 8px; /* Điều chỉnh padding cho input */
   }
 
-  .menu-expanded .header-2 {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .menu-expanded .button {
-    width: 100%;
-    padding: 10px;
-    text-align: left;
-  }
-
-  .menu-expanded .search-container {
-    margin-top: 10px;
+  .menu-icon {
+    font-size: 28px; /* Tăng kích thước icon menu */
+    cursor: pointer;
+    position: absolute; /* Đưa icon vào vị trí cố định */
+    top: 10px;
+    right: 10px;
   }
 }
