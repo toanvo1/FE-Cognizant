@@ -48,18 +48,18 @@
   padding-left: 10px;
 }
 .button:hover {
-  background: #006543;
+  background: #044026;
   color: #fff;
 }
 .button.selected {
-  background-color: #006543; /* Màu nền khi hover hoặc khi nút được chọn */
+  background-color: #044026; /* Màu nền khi hover hoặc khi nút được chọn */
   color: #fff; /* Màu chữ */
 }
 
 .search-container {
   display: flex;
   align-items: center;
-  border: 1px solid #006543;
+  border: 1px solid #044026;
   border-radius: 6px;
   padding: 5px;
   box-sizing: border-box;
@@ -73,7 +73,7 @@
 .search-icon {
   font-size: 18px;
   margin-right: 10px;
-  color: #006543;
+  color: #044026;
 }
 
 .search-input-123 {
