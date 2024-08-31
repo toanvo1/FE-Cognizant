@@ -2,7 +2,7 @@
 .industries-form {
   display: flex;
   width: 100%;
-  height: 100vh; /* Đảm bảo sidebar và nội dung chiếm hết chiều cao màn hình */
+  min-height: 180vh; /* Đảm bảo sidebar và nội dung chiếm hết chiều cao màn hình */
   font-family: Arial, sans-serif;
   overflow: hidden; /* Ẩn nội dung bên ngoài khu vực */
 }
