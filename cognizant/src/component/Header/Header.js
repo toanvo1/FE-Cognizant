@@ -97,6 +97,10 @@ const Header = () => {
           ABOUT US
           <FontAwesomeIcon icon={selectedForm === "about" ? faCaretUp : faCaretDown} className="icon" />
         </div>
+        <div className={`button ${selectedForm === "contact" ? "selected" : ""}`} onClick={() => handleClick("contact")}>
+          CONTACT
+          <FontAwesomeIcon icon={selectedForm === "contact" ? faCaretUp : faCaretDown} className="icon" />
+        </div>
       </div>
       <div className="search-container">
         <FontAwesomeIcon icon={faSearch} className="search-icon" />
