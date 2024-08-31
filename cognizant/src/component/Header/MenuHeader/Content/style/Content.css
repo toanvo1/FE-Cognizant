@@ -1,46 +1,89 @@
-    
-
+/* General Content Wrapper */
 .content-wrapper {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-  }
-  .content-inner {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-  }
-  
-  .content-image {
-    width: 100%;
-    height: 250px;
-    object-fit: cover; 
-  }
-  .content-heading {
-    color: #044026;
-    margin-bottom: 10px;
-    font-size: 32px;
-    border-bottom: 1.2px solid #044026;
-    
-  }
-  
-  .content-paragraph {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #000000;
-  }
-  
-  .content-list {
-    list-style-type: disc;
-    padding-left: 40px;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
 
+/* Inner Content Area */
+.content-inner {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Content Image */
+.content-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Heading Styles */
+.content-heading {
+  color: #044026;
+  margin-bottom: 10px;
+  font-size: 32px;
+  border-bottom: 1.2px solid #044026;
+}
+
+/* Paragraph Styles */
+.content-paragraph {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #000000;
+}
+
+/* List Styles */
+.content-list {
+  list-style-type: disc;
+  padding-left: 40px;
+}
+
+/* List Item Styles */
+.content-list-item {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #000000;
+}
+
+.content-list-item strong {
+  color: #000000;
+}
+
+/* Responsive Styles for Mobile Devices */
+@media only screen and (max-width: 768px) {
+  /* Adjusting padding and line-height */
+  .content-inner {
+    padding: 15px;
+    line-height: 1.4;
   }
-  
+
+  /* Adjusting image height for smaller screens */
+  .content-image {
+    height: 200px; /* Reduce height for mobile */
+  }
+
+  /* Adjusting heading size */
+  .content-heading {
+    font-size: 28px; /* Slightly smaller heading */
+    margin-bottom: 8px;
+    border-bottom: 1px solid #044026;
+  }
+
+  /* Adjusting paragraph font size */
+  .content-paragraph {
+    font-size: 18px; /* Smaller text for better readability on mobile */
+    margin-bottom: 15px;
+  }
+
+  /* Adjusting list item font size */
   .content-list-item {
-    margin-bottom: 10px;
-    font-size: 24px;
-    color: #000000;
+    font-size: 18px; /* Smaller text for list items */
+    margin-bottom: 8px;
   }
-  
-  .content-list-item strong {
-    color: #000000;
+
+  /* Adjust padding for list */
+  .content-list {
+    padding-left: 20px; /* Reduce padding for mobile */
   }
+}
