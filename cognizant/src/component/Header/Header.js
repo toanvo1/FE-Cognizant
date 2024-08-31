@@ -6,7 +6,7 @@ import "../Header/header.css";
 import IndustriesForm from "../Header/MenuHeader/Menu/IndustriesForm";
 import ServiceForm from "../Header/MenuHeader/Menu/ServiceForm";
 import AboutForm from "../Header/MenuHeader/Menu/AboutForm";
-import Contanct from "./MenuHeader/Menu/Contanct";
+import Contact from "./MenuHeader/Menu/Contact";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCaretDown,
@@ -27,15 +27,15 @@ const Header = () => {
     };
 
     const handleScroll = () => {
-      if (formRef.current) {
-        const { top } = formRef.current.getBoundingClientRect();
-        const viewportHeight = window.innerHeight;
+      // if (formRef.current) {
+      //   const { top } = formRef.current.getBoundingClientRect();
+      //   const viewportHeight = window.innerHeight;
 
-        if (top < 0) {
-          setSelectedForm(null); // Đóng sidebar và quay lại trang chính
-          // window.scrollTo({ top: 0, behavior: "smooth" }); // Cuộn lên đầu trang mượt mà
-        }
-      }
+      //   if (top < 0) {
+      //     setSelectedForm(null);
+          
+      //   }
+      // }
     };
 
     handleResize(); // Kiểm tra kích thước màn hình khi component mount
@@ -48,12 +48,11 @@ const Header = () => {
     };
   }, []);
 
-  const handleClick = (form) => {
-    setSelectedForm(form === selectedForm ? null : form); // Toggle form visibility
-    if (form === null) {
-      window.scrollTo({ top: 0, behavior: "smooth" }); // Cuộn lên đầu trang mượt mà khi đóng
-    }
-  };
+const handleClick = (form) => {
+  setSelectedForm(form === selectedForm ? null : form); // Toggle form visibility
+  setMenuOpen(true); // Ensure menu is open
+  console.log("Selected Form: ", selectedForm);
+};
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -108,11 +107,14 @@ const Header = () => {
       </div>
     </div>
     {(menuOpen || !isMobile) && (
-      <div className={`form-container ${selectedForm ? "" : "hidden"}`} ref={formRef}>
+      <div
+      className={`form-container ${selectedForm ? "" : "hidden"}`}
+      ref={formRef}
+    >
         {selectedForm === "industries" && <IndustriesForm />}
         {selectedForm === "service" && <ServiceForm />}
         {selectedForm === "about" && <AboutForm />}
-        {selectedForm === "contact" && <Contanct />}
+        {selectedForm === "contact" && <Contact />}
       </div>
     )}
   </div>
