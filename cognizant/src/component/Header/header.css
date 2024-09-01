@@ -80,6 +80,7 @@
   max-width: 400px;
   margin-left: auto;
   background-color: #ffffff;
+  margin-left: 40px; 
 }
 
 .search-icon {
@@ -134,12 +135,14 @@
     text-align: center;
     padding: 12px 20px;
     font-size: 18px;
+    
   }
 
   .search-container {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     padding: 8px 15px;
+    gap:10px;
   }
 
   .search-input-123 {
