@@ -156,10 +156,12 @@
   }
 
   .menu-icon {
-    font-size: 28px;
+    font-size: 30px;
     cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 15px;
+    position: absolute; /* Đặt nút ở mép trái */
+    left: 35px; /* Căn lề trái */
+    top: 10%; /* Căn giữa theo chiều dọc */
+    transform: translateY(-60%); /* Điều chỉnh để nút nằm giữa logo theo chiều dọc */
   }
+  
 }

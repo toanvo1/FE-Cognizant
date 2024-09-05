@@ -25,24 +25,12 @@ const Header = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768); // Cập nhật trạng thái isMobile dựa trên kích thước màn hình
     };
-
-    const handleScroll = () => {
-      // if (formRef.current) {
-      //   const { top } = formRef.current.getBoundingClientRect();
-      //   const viewportHeight = window.innerHeight;
-      //   if (top < 0) {
-      //     setSelectedForm(null);
-      //   }
-      // }
-    };
-
+  
     handleResize(); // Kiểm tra kích thước màn hình khi component mount
     window.addEventListener("resize", handleResize); // Lắng nghe sự kiện thay đổi kích thước màn hình
-    window.addEventListener("scroll", handleScroll); // Lắng nghe sự kiện cuộn trang
-
+  
     return () => {
       window.removeEventListener("resize", handleResize); // Cleanup event listener
-      window.removeEventListener("scroll", handleScroll); // Cleanup event listener
     };
   }, []);
 
@@ -62,87 +50,121 @@ const Header = () => {
         <div className="header-1">
           {!isMobile && (
             <>
-              <Link to="/" className="header-link-none">
-                Careers
-              </Link>
-              <Link to="/" className="header-link-none">
-                News
-              </Link>
-              <Link to="/" className="header-link-none">
-                Events
-              </Link>
-              <Link to="/" className="header-link-none">
-                Investors
-              </Link>
+              <Link to="/" className="header-link-none">Careers</Link>
+              <Link to="/" className="header-link-none">News</Link>
+              <Link to="/" className="header-link-none">Events</Link>
+              <Link to="/" className="header-link-none">Investors</Link>
             </>
           )}
         </div>
         <div className="header-2">
-          <div className="image">
-            <img src={logo} alt="logo" className="logo" />
+  <div className="image">
+    <img src={logo} alt="logo" className="logo" />
+  </div>
+  {!isMobile ? (
+    <div className="nav-links">
+      {/* Các nút link bình thường */}
+      <div
+        className={`button ${selectedForm === "industries" ? "selected" : ""}`}
+        onClick={() => handleClick("industries")}
+      >
+        INDUSTRIES
+        <FontAwesomeIcon
+          icon={selectedForm === "industries" ? faCaretUp : faCaretDown}
+          className="icon"
+        />
+      </div>
+      <div
+        className={`button ${selectedForm === "service" ? "selected" : ""}`}
+        onClick={() => handleClick("service")}
+      >
+        SERVICES
+        <FontAwesomeIcon
+          icon={selectedForm === "service" ? faCaretUp : faCaretDown}
+          className="icon"
+        />
+      </div>
+      <div
+        className={`button ${selectedForm === "about" ? "selected" : ""}`}
+        onClick={() => handleClick("about")}
+      >
+        ABOUT US
+        <FontAwesomeIcon
+          icon={selectedForm === "about" ? faCaretUp : faCaretDown}
+          className="icon"
+        />
+      </div>
+      <div
+        className={`button ${selectedForm === "contact" ? "selected" : ""}`}
+        onClick={() => handleClick("contact")}
+      >
+        CONTACT
+        <FontAwesomeIcon
+          icon={selectedForm === "contact" ? faCaretUp : faCaretDown}
+          className="icon"
+        />
+      </div>
+    </div>
+  ) : (
+    <div>
+      <div className="menu-icon" onClick={toggleMenu}>
+        <FontAwesomeIcon icon={faBars} className="icon" />
+      </div>
+      {menuOpen && (
+        <div className="nav-links">
+          <div
+            className={`button ${selectedForm === "industries" ? "selected" : ""}`}
+            onClick={() => handleClick("industries")}
+          >
+            INDUSTRIES
+            <FontAwesomeIcon
+              icon={selectedForm === "industries" ? faCaretUp : faCaretDown}
+              className="icon"
+            />
           </div>
-          <div className="nav-links">
-            <div
-              className={`button ${
-                selectedForm === "industries" ? "selected" : ""
-              }`}
-              onClick={() => handleClick("industries")}
-            >
-              INDUSTRIES
-              <FontAwesomeIcon
-                icon={selectedForm === "industries" ? faCaretUp : faCaretDown}
-                className="icon"
-              />
-            </div>
-            <div
-              className={`button ${
-                selectedForm === "service" ? "selected" : ""
-              }`}
-              onClick={() => handleClick("service")}
-            >
-              SERVICES
-              <FontAwesomeIcon
-                icon={selectedForm === "service" ? faCaretUp : faCaretDown}
-                className="icon"
-              />
-            </div>
-            <div
-              className={`button ${selectedForm === "about" ? "selected" : ""}`}
-              onClick={() => handleClick("about")}
-            >
-              ABOUT US
-              <FontAwesomeIcon
-                icon={selectedForm === "about" ? faCaretUp : faCaretDown}
-                className="icon"
-              />
-            </div>
-            <div
-              className={`button ${
-                selectedForm === "contact" ? "selected" : ""
-              }`}
-              onClick={() => handleClick("contact")}
-            >
-              CONTACT
-              <FontAwesomeIcon
-                icon={selectedForm === "contact" ? faCaretUp : faCaretDown}
-                className="icon"
-              />
-            </div>
+          <div
+            className={`button ${selectedForm === "service" ? "selected" : ""}`}
+            onClick={() => handleClick("service")}
+          >
+            SERVICES
+            <FontAwesomeIcon
+              icon={selectedForm === "service" ? faCaretUp : faCaretDown}
+              className="icon"
+            />
           </div>
-          <div className="search-container">
-            <FontAwesomeIcon icon={faSearch} className="search-icon" />
-            <input
-              type="text"
-              placeholder="Search"
-              className="search-input-123"
+          <div
+            className={`button ${selectedForm === "about" ? "selected" : ""}`}
+            onClick={() => handleClick("about")}
+          >
+            ABOUT US
+            <FontAwesomeIcon
+              icon={selectedForm === "about" ? faCaretUp : faCaretDown}
+              className="icon"
+            />
+          </div>
+          <div
+            className={`button ${selectedForm === "contact" ? "selected" : ""}`}
+            onClick={() => handleClick("contact")}
+          >
+            CONTACT
+            <FontAwesomeIcon
+              icon={selectedForm === "contact" ? faCaretUp : faCaretDown}
+              className="icon"
             />
           </div>
         </div>
+      )}
+    </div>
+  )}
+  <div className="search-container">
+    <FontAwesomeIcon icon={faSearch} className="search-icon" />
+    <input type="text" placeholder="Search" className="search-input-123" />
+  </div>
+</div>
+
+  
         {(menuOpen || !isMobile) && (
-          <div
-            className={`form-container ${selectedForm ? "" : "hidden"}`}
-            ref={formRef}
-          >
+          <div className={`form-container ${selectedForm ? "" : "hidden"}`} ref={formRef}>
             {selectedForm === "industries" && <IndustriesForm />}
             {selectedForm === "service" && <ServiceForm />}
             {selectedForm === "about" && <AboutForm />}
