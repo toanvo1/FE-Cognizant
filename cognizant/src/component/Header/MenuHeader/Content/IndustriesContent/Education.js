@@ -6,7 +6,7 @@ const Education = () => {
     <div className="content-wrapper">
       {/* Image Section */}
       <img
-        src="https://s3-alpha-sig.figma.com/img/31b5/6f89/320e682a1f11a78518b925ca976b9b9d?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=eNSvjsg-oMfyGHq901qL9u9ru6m4pO8dt~PlWkxn0Sy4rTvAFUOrzR5Ey36fM~VzCS1h5gkh7Q0h7jpqEDenVo8PwcUrEvi3QHr9QBF7drtbmoMnnK4u-2UGfjQp1FFbhVf1NSwgYowpB~w8gK0P4DvWo573C9wBVUYBG0fTnQySUiWphcYUTuuR9mF2iLXvYx8H5q7QJXZEJG4FU8s1wp5TTgvBM4~MhmAQm6yLc6HPlLH2qNgCbro98C8iH~Td91sgF7lNq6wcV2mDYRWI8usgznbsGdwNvmYWg6Ao-zWB68O3rnMlQuxDJqAopQOpUtZ2Gh1al4ucI~78neQbMg__"
+        src="https://www.21kschool.com/vn/wp-content/uploads/sites/5/2021/01/rptgtpxd-1396254731.jpg"
         alt="Education"
         className="content-image"
       />

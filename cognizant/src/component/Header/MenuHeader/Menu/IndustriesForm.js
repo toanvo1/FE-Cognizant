@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGraduationCap, faDollarSign, faTruck, faFilm } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGraduationCap,
+  faDollarSign,
+  faTruck,
+  faFilm,
+  faCoins,
+} from "@fortawesome/free-solid-svg-icons";
 import Communication from "../Content/IndustriesContent/Communication";
 import Education from "../Content/IndustriesContent/Education";
 import Oils from "../Content/IndustriesContent/Oils";
 import Retail from "../Content/IndustriesContent/Retail";
 import Transportation from "../Content/IndustriesContent/Transportation";
+import Economy from "../Content/IndustriesContent/Economy";
 
 const IndustriesForm = () => {
   const [activeSection, setActiveSection] = useState(null); // Quản lý trạng thái của section đang hiển thị
@@ -19,7 +26,7 @@ const IndustriesForm = () => {
       <div className="sidebar">
         <ul>
           <li>
-            <button 
+            <button
               className={activeSection === "education" ? "active" : ""}
               onClick={() => handleSectionClick("education")}
             >
@@ -30,7 +37,18 @@ const IndustriesForm = () => {
             </button>
           </li>
           <li>
-            <button 
+            <button
+              className={activeSection === "economy" ? "active" : ""}
+              onClick={() => handleSectionClick("economy")}
+            >
+              <span className="icon">
+              <FontAwesomeIcon icon={faCoins} />
+              </span>
+              <span className="button-text">Finance & Investment</span>
+            </button>
+          </li>
+          <li>
+            <button
               className={activeSection === "retail" ? "active" : ""}
               onClick={() => handleSectionClick("retail")}
             >
@@ -40,8 +58,8 @@ const IndustriesForm = () => {
               <span className="button-text">Retail</span>
             </button>
           </li>
-          <li>
-            <button 
+          {/* <li>
+            <button
               className={activeSection === "transportation" ? "active" : ""}
               onClick={() => handleSectionClick("transportation")}
             >
@@ -50,21 +68,28 @@ const IndustriesForm = () => {
               </span>
               <span className="button-text">Transportation & Logistics</span>
             </button>
-          </li>
+          </li> */}
           <li>
-            <button 
+            <button
               className={activeSection === "mediatechlogy" ? "active" : ""}
               onClick={() => handleSectionClick("mediatechlogy")}
             >
               <span className="icon">
                 <FontAwesomeIcon icon={faFilm} />
               </span>
-              <span className="button-text">Communications, Media & Technology</span>
+              <span className="button-text">
+                Communications, Media & Technology
+              </span>
             </button>
           </li>
         </ul>
       </div>
       <div className="content">
+        {activeSection === "economy" && (
+          <div id="educeconomyation">
+            <Economy />
+          </div>
+        )}
         {activeSection === "education" && (
           <div id="education">
             <Education />

@@ -240,7 +240,9 @@
   .modal-1 {
     padding: 10px;
   }
-
+  .banner-midle-content {
+    margin-left: 15px;
+  }
   .text-banner-content-1 {
     padding: 10px; /* Giảm padding */
     font-size: 14px; /* Giảm kích thước chữ */
@@ -261,5 +263,60 @@
   }
   .image-mot {
     padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .banner-midle {
+    padding: 10px; /* Add padding to ensure content doesn't touch the edges */
+    height: auto; /* Ensure height adjusts to content */
+  }
+
+  .modal {
+    width: 100%;
+    height: auto; /* Ensure height adjusts to content */
+    padding: 10px; /* Add padding to ensure content doesn't touch the edges */
+  }
+
+  .banner-midle-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; /* Add padding to ensure content doesn't touch the edges */
+  }
+
+  .banner-midle-content-image {
+    flex-direction: row;
+    gap: 20px; /* Add gap between images */
+    padding: 10px; /* Add padding to ensure content doesn't touch the edges */
+  }
+
+  .text-content-header {
+    font-size: 16px; /* Increase font size for readability */
+    max-width: 100%; /* Ensure text doesn't get cut off */
+    margin-bottom: 20px; /* Reduce bottom margin */
+  }
+
+  .cta-button-1 {
+    width: auto;
+    height: auto;
+    padding: 10px 20px; /* Adjust padding for button */
+    font-size: 14px; /* Adjust font size for button */
+  }
+
+  .loader-banner-image,
+  .loader-banner-image-white {
+    width: 100%;
+    height: auto; /* Ensure height adjusts to content */
+  }
+
+  .modal-1 {
+    width: 100%;
+    height: auto; /* Ensure height adjusts to content */
+    padding: 20px; /* Add padding to ensure content doesn't touch the edges */
+  }
+
+  .text-banner-content-1 {
+    padding: 20px; /* Reduce padding for smaller devices */
+    font-size: 16px; /* Adjust font size for readability */
   }
 }

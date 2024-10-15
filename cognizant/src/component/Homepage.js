@@ -1,17 +1,22 @@
 import React from "react";
 import Banner from "./Banner/Banner";
-import Footer from "./Footer/Footer";
-const Homepage = () => {
+
+
+const HomePage = ({ showBannerAndFooter }) => {
   return (
     <>
-    <div>
-      <Banner />
-      </div>
-    <div>
-    <Footer />
-    </div>
-      </>
+      {showBannerAndFooter && (
+        <div>
+          <Banner />
+        </div>
+      )}
+      {showBannerAndFooter && (
+        <div>
+          {/* <Footer /> */}
+        </div>
+      )}
+    </>
   );
 };
 
-export default Homepage;
+export default HomePage;

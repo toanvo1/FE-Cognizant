@@ -1,5 +1,16 @@
 import React, { useState } from "react";
-import { CloudOutlined, UsergroupAddOutlined, SettingOutlined, ContactsOutlined , UnlockOutlined, CommentOutlined, SolutionOutlined, LaptopOutlined, DatabaseOutlined } from '@ant-design/icons';
+import {
+  CloudOutlined,
+  UsergroupAddOutlined,
+  SettingOutlined,
+  ContactsOutlined,
+  UnlockOutlined,
+  CommentOutlined,
+  SolutionOutlined,
+  LaptopOutlined,
+  DatabaseOutlined,
+  DollarOutlined,
+} from "@ant-design/icons";
 import Account from "../Content/ServicesContent/Account";
 import Business from "../Content/ServicesContent/Business";
 import CloudSolutions from "../Content/ServicesContent/CloudSolutions";
@@ -9,8 +20,9 @@ import Software from "../Content/ServicesContent/Software";
 import Comsulting from "../Content/ServicesContent/Consulting";
 import Application from "../Content/ServicesContent/Application";
 import Infrastructure from "../Content/ServicesContent/Infrastructure";
-import Marketing from "../Content/ServicesContent/WebDesign"
+import Marketing from "../Content/ServicesContent/WebDesign";
 import "./MenuForm.css";
+import Quant from "../Content/ServicesContent/Quant";
 
 const ServiceForm = () => {
   const [activeSection, setActiveSection] = useState(null); // Quản lý trạng thái của section đang hiển thị
@@ -24,18 +36,29 @@ const ServiceForm = () => {
       <div className="sidebar">
         <ul>
           <li>
-            <button 
-              className={activeSection === "Cloud" ? "active" : ""}
-              onClick={() => handleSectionClick("Cloud")}
+            <button
+              className={activeSection === "quant" ? "active" : ""}
+              onClick={() => handleSectionClick("quant")}
             >
               <span className="icon">
                 <CloudOutlined />
               </span>
-              <span className="button-text">Cloud Solutions</span>
+              <span className="button-text">Quant</span>
             </button>
           </li>
           <li>
-            <button 
+            <button
+              className={activeSection === "Cloud" ? "active" : ""}
+              onClick={() => handleSectionClick("Cloud")}
+            >
+              <span className="icon">
+                <DollarOutlined />
+              </span>
+              <span className="button-text">Accounting</span>
+            </button>
+          </li>
+          <li>
+            <button
               className={activeSection === "Coworking" ? "active" : ""}
               onClick={() => handleSectionClick("Coworking")}
             >
@@ -46,7 +69,7 @@ const ServiceForm = () => {
             </button>
           </li>
           <li>
-            <button 
+            <button
               className={activeSection === "Software" ? "active" : ""}
               onClick={() => handleSectionClick("Software")}
             >
@@ -56,19 +79,19 @@ const ServiceForm = () => {
               <span className="button-text">Software Engineering</span>
             </button>
           </li>
-          <li>
-            <button 
+          {/* <li>
+            <button
               className={activeSection === "Application" ? "active" : ""}
               onClick={() => handleSectionClick("Application")}
             >
               <span className="icon">
-                <ContactsOutlined /> 
+                <ContactsOutlined />
               </span>
               <span className="button-text">Application Services</span>
             </button>
-          </li>
+          </li> */}
           <li>
-            <button 
+            <button
               className={activeSection === "Cybersecurity" ? "active" : ""}
               onClick={() => handleSectionClick("Cybersecurity")}
             >
@@ -79,7 +102,7 @@ const ServiceForm = () => {
             </button>
           </li>
           <li>
-            <button 
+            <button
               className={activeSection === "Consulting" ? "active" : ""}
               onClick={() => handleSectionClick("Consulting")}
             >
@@ -89,8 +112,8 @@ const ServiceForm = () => {
               <span className="button-text">Consulting</span>
             </button>
           </li>
-          <li>
-            <button 
+          {/* <li>
+            <button
               className={activeSection === "Business" ? "active" : ""}
               onClick={() => handleSectionClick("Business")}
             >
@@ -99,20 +122,22 @@ const ServiceForm = () => {
               </span>
               <span className="button-text">Business Process Services</span>
             </button>
-          </li>
+          </li> */}
           <li>
-            <button 
+            <button
               className={activeSection === "Marketing" ? "active" : ""}
               onClick={() => handleSectionClick("Marketing")}
             >
               <span className="icon">
                 <LaptopOutlined />
               </span>
-              <span className="button-text">Web Design & Digital Marketing</span>
+              <span className="button-text">
+                Web Design & Digital Marketing
+              </span>
             </button>
           </li>
           <li>
-            <button 
+            <button
               className={activeSection === "Infrastructure" ? "active" : ""}
               onClick={() => handleSectionClick("Infrastructure")}
             >
@@ -125,6 +150,11 @@ const ServiceForm = () => {
         </ul>
       </div>
       <div className="content">
+        {activeSection === "quant" && (
+          <div id="quant">
+            <Quant />
+          </div>
+        )}
         {activeSection === "Cloud" && (
           <div id="Cloud">
             <CloudSolutions />

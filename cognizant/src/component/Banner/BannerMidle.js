@@ -101,7 +101,6 @@ const BannerMidle = () => {
             </div>
           </div>
         </div>
-
         <div className="text-banner-content-1"></div>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div className="modal-1">

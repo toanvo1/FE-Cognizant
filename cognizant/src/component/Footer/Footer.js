@@ -6,7 +6,7 @@ import FooterTop from "./FooterTop";
 function Footer({ formData = {}, handleChange }) {
   return (
     <div>
-      <div className="container">
+      <div className="">
         <div className="container-inner">
           <h2 className="title">Ready to accelerate your business?</h2>
           <p className="subtitle">We’re here to help and answer any questions you might have.</p>

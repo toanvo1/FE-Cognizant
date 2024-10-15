@@ -6,12 +6,10 @@ const Transportation = () => {
     <div className="content-wrapper">
       {/* Image Section */}
       <img
-        src="https://s3-alpha-sig.figma.com/img/a70d/3d92/e980f5a03cd6f56058b36bfbe4a0f249?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HV2VwQM3tMh~YEHF~tUK6MwTRuORjGkGRDbbxTwXxuAfb5CnEsK8PT8jVr4GsZ6fYPEtIvLyQSZgT2PuL6o1OPcCjh5EtNKtL97n9b9cqfMtsQ5AAf-S5QvdIU8IWvTaLvL1iATp0dgonAgT85TH2mJeFnJxeuQ5BMoocuaP70FSFT29uanmLeOGoHng~fbyKIw3jueI-KBF3EzUhv2rOt1KnkD5-3afaxR7~i9XL50oAw49wWY2prcav-uAXZ5TMvJNmkw~PWpBrYsHwtNV9F8ZwfgQ7ZD~sS8dqUrPCCEVVTud1AkhFPaUwZHpVCSiF5i0eKcchXSUk0L7zEfMwA__"
+        src="https://www..edu.in/public/uploads/media/EOjNIcORfcfK3oKPWFRLy4ditDEz65ESmuliSjQY.webp"
         alt="Education"
         className="content-image"
       />
-
-
       {/* Text Section */}
       <div className="content-inner">
       <h2 className="content-heading">Communications, Media & Technology</h2>

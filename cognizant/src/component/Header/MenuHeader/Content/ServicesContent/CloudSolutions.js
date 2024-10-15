@@ -6,7 +6,7 @@ const CloudSolution = () => {
     <div className="content-wrapper">
       {/* Image Section */}
       <img
-        src="https://s3-alpha-sig.figma.com/img/e99d/d713/fb224413af0099a09c53729938b2983a?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HqIu~MwY7gX6CxIeO8QWf4KTXXC-MVf3ciSI8JbAHcpZ-~zI0kHmwL5t-FrSz5jXpheIazyVquFbY3BNUBtvFw7xoUL2Zhil08E9Ov3MR~JMAbrqkfEq5tEYB5kZhoLa87XJfUsGEIxxhfM0iuBZAQxlkeYrTFXRQFjNSH0wwy0pNJVbuB7VOfskJCS2VvINsgvTgruWWQW3LGx~SJy4X5pA~1LVcqDY-JBaJDzhYs916eg7KJhaK3~m3nX01Qw-JxkIBtVY1PJC98c-BCNoV~vVxWj62HNH0~9sk7HiExjilRKULAR4iA4Qvu-wogVB15IzViZ5jbIBUSLFCT8N1Q__"
+        src="https://www.freshbooks.com/wp-content/uploads/2022/02/8-branches-of-accounting.jpg"
         alt="Education"
         className="content-image"
       />

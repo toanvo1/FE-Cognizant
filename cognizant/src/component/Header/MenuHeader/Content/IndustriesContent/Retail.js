@@ -6,12 +6,10 @@ const Retail = () => {
     <div className="content-wrapper">
       {/* Image Section */}
       <img
-        src="https://s3-alpha-sig.figma.com/img/ba51/d7b7/53116913d15719c91f8fdcadad119453?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=AaNsYlrxfJLtPOv9NGIWfFUu9s4ONVG3S1L6TguUgjg-1BA3RkzhRa7A~uCcI5Iox1gsw4dsMeGYSm-KbH7kWa7~NkqG55hSJasHEfgeCQuJGGw2968w8FO6SIhSKtDjPVqFtGIj4z6zV54I8GgBMYnAMjbz32PQrIU7Y2lJnA82E93N8WIZ2PCdrxWhu0f0SGJE-x1OlwJ468N21pv92rSud~E9Td98yefi-66nI35Tu74gGaP7TuFPNhayt9B033qxGedC0fuwhJteqVG9BxM8AEihdpFCogG~X8-2VW1xYc4JZwEqHzhEcrycglZRpiQfRx-RPbLYjE3wxKB17Q__"
+        src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/08/retail-la-gi.jpg"
         alt="Education"
         className="content-image"
       />
-
-
       {/* Text Section */}
       <div className="content-inner">
       <h2 className="content-heading">Retail</h2>
